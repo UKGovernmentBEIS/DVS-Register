@@ -1,0 +1,68 @@
+// There may be an existing component we can replace this with
+
+.dsit-definition-list {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: 40.0625em) {
+    & {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__definition {
+    margin: 0;
+  }
+
+  &__title {
+    clear: both;
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__title:after {
+    content: ":";
+  }
+
+  &__definition {
+    float: left;
+  }
+
+  &--meta {
+    overflow: hidden;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+  }
+
+  &--meta &__title {
+    clear: both;
+    float: left;
+    font-weight: normal;
+    color: #505a5f;
+    margin-right: 0.3em;
+  }
+
+  @media (min-width: 40.0625em) {
+    &--meta {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+  }
+}

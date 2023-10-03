@@ -1,0 +1,353 @@
+{% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
+provider - GOV.UK {% endblock %} {% block beforeContent %} {{super()}}
+<a class="govuk-back-link" href="/start">Back</a>
+{% endblock %} {% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Identity providers</h1>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-3"></div>
+<!-- END title -->
+
+<!-- START filter -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div
+      class="dsit-filter das-!-show--from-tablet"
+      id="fat-filter"
+      tabindex="0"
+    >
+      <div class="dsit-filter__header">
+        <h2 class="govuk-heading-m govuk-!-margin-0">Filter</h2>
+      </div>
+      <div class="dsit-filter__selected-filters">
+        <div class="dsit-filter__selected-header">
+          <h3 class="dsit-filter__selected-heading govuk-heading-s">
+            Selected filters
+          </h3>
+          <a
+            class="dsit-filter__selected-action govuk-link govuk-link--no-visited-state"
+            href="#"
+            >Clear
+            <span class="govuk-visually-hidden">the selected filters</span></a
+          >
+        </div>
+        <h4 class="dsit-filter__selected-sub-heading govuk-heading-s">
+          Scheme type:
+        </h4>
+        <a class="dsit-filter__tag" title="Right to work" href="#"
+          >Right to work</a
+        >
+        <h4 class="dsit-filter__selected-sub-heading govuk-heading-s">
+          Role type:
+        </h4>
+        <a
+          class="dsit-filter__tag"
+          title="Clear this sector filter Creative and design"
+          href="#"
+          >Identity</a
+        >
+        <a
+          class="dsit-filter__tag"
+          title="Clear this sector filter Digital"
+          href="#"
+          >Attribute</a
+        >
+      </div>
+      <div
+        class="dsit-filter__body das-!-show--from-tablet das-show-hide__section"
+        id="fat-filter-options"
+      >
+        <form method="GET" action="#">
+          <button type="submit" class="govuk-button" id="filters-submit">
+            Apply filters
+          </button>
+          <div class="govuk-form-group">
+            <label for="Keyword" class="govuk-label dsit-filter__search-label"
+              >Identity service providers
+              <p class="govuk-hint">Enter a service or keywords</p>
+            </label>
+            <input
+              name="keyword"
+              type="search"
+              title="Search"
+              class="govuk-input"
+              id="Keyword"
+              value=""
+            />
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Scheme type:
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input
+                    checked
+                    class="govuk-checkboxes__input"
+                    id="level-2"
+                    name="levels"
+                    type="checkbox"
+                    value="2"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="level-2"
+                  >
+                    Right to work
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input
+                    class="govuk-checkboxes__input"
+                    id="level-3"
+                    name="levels"
+                    type="checkbox"
+                    value="3"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="level-3"
+                  >
+                    Right to rent
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input
+                    class="govuk-checkboxes__input"
+                    id="level-4"
+                    name="levels"
+                    type="checkbox"
+                    value="4"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="level-4"
+                  >
+                    Disclosure and Barring Service
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Role type
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input
+                    checked
+                    class="govuk-checkboxes__input"
+                    id="route-c832e305-fb1a-4ffe-9a3f-7a2cd675059b"
+                    name="sectors"
+                    type="checkbox"
+                    value="Agriculture, environmental and animal care"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="route-c832e305-fb1a-4ffe-9a3f-7a2cd675059b"
+                  >
+                    Identity
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input
+                    checked
+                    class="govuk-checkboxes__input"
+                    id="route-85028bed-f49e-4318-abe6-484bcbb89cad"
+                    name="sectors"
+                    type="checkbox"
+                    value="Business and administration"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="route-85028bed-f49e-4318-abe6-484bcbb89cad"
+                  >
+                    Attribute
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input
+                    class="govuk-checkboxes__input"
+                    id="route-42822f1a-b278-4baf-b651-653623af1aae"
+                    name="sectors"
+                    type="checkbox"
+                    value="Care services"
+                  />
+                  <label
+                    class="govuk-label govuk-checkboxes__label"
+                    for="route-42822f1a-b278-4baf-b651-653623af1aae"
+                  >
+                    Orchestration
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-3">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"
+                target="_blank"
+                rel="external"
+                >What are the different provider roles? (opens in a new
+                window)</a
+              >
+            </p>
+          </div>
+          <button type="submit" class="govuk-button" id="filters-submit-second">
+            Apply filters
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- END filter -->
+
+  <div class="govuk-grid-column-two-thirds">
+    <!-- START cards -->
+    <h2 class="govuk-heading-m">43 results</h2>
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      Sorted by:
+      <span class="govuk-!-font-weight-bold">Name</span>
+    </p>
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
+    />
+    <h2
+      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
+    >
+      <a
+        class="das-search-results__link"
+        id="vacancy-aof"
+        href="vacancy-page-aof.html"
+      >
+        Yoti and Post Office EasyID</a
+      >
+    </h2>
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S7 3PT</p>
+    <p class="govuk-body das-search-results__body">
+      The only and best digital identification services company
+    </p>
+    <dl
+      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
+    >
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">Right to work</dd>
+    </dl>
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+    />
+
+    <h2
+      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
+    >
+      <a
+        class="das-search-results__link"
+        id="vacancy-02"
+        href="vacancy-page-02"
+      >
+        Hooyu Limited, A MiTek Company</a
+      >
+    </h2>
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S1 3FG</p>
+    <p class="govuk-body das-search-results__body">
+      The only and best digital identification services company
+    </p>
+    <dl
+      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
+    >
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to work, right to rent
+      </dd>
+    </dl>
+    <img src="/public/images/disability-confident.png" width="130px" />
+    <div class="govuk-!-padding-bottom-3"></div>
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+    />
+
+    <h2
+      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
+    >
+      <a class="das-search-results__link" id="standard-274" href="#">
+        TrustID Limited</a
+      >
+    </h2>
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S3 7GE</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
+    <p class="govuk-body"><b>Attribute</b> x</p>
+    <dl
+      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
+    >
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to work, right to rent
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
+    />
+
+    <h2
+      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-0"
+    >
+      <a class="das-search-results__link" id="standard-274" href="#">
+        OneID Ltd</a
+      >
+    </h2>
+
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S12 3HL</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
+    <p class="govuk-body"><b>Attribute</b> x</p>
+    <dl
+      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
+    >
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to work, right to rent
+      </dd>
+    </dl>
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
+    />
+
+    <h2
+      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
+    >
+      <a class="das-search-results__link" id="standard-274" href="#">
+        Paycasso Verify Ltd trading as Xydus</a
+      >
+    </h2>
+
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S35 8PR</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
+    <p class="govuk-body"><b>Attribute</b> x</p>
+    <dl
+      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
+    >
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">Right to rent</dd>
+    </dl>
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
+    />
+    <!-- END cards -->
+
+    {% from "govuk/components/pagination/macro.njk" import govukPagination %} {%
+    from "govuk/components/pagination/macro.njk" import govukPagination %} {{
+    govukPagination({ next: { href: "#" }, items: [ { number: 1, current: true,
+    href: "#" }, { number: 2, href: "#" }, { number: 3, href: "#" } ] }) }}
+  </div>
+
+  {% endblock %}
+</div>

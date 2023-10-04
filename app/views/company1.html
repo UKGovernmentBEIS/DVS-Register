@@ -1,0 +1,115 @@
+{% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
+provider - GOV.UK {% endblock %} {% block beforeContent %} {{ govukBreadcrumbs({
+items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
+href: "search" }] }) }} {% endblock %} {% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-l"
+        >Identity provider<span class="govuk-visually-hidden">:</span></span
+      >
+      Hooyu Limited, A MiTek Company
+    </h1>
+  </div>
+</div>
+<!-- END title -->
+
+<!-- prettier-ignore -->
+<div class="govuk-grid-row">`
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-9">
+      <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Schemes certified against:</p>
+      {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+      {{ govukTag({
+        text: "Right to work"
+      }) }}
+      {{ govukTag({
+        text: "Right to rent"
+      }) }}
+      {{ govukTag({
+        text: "Discoloure and Barring Service"
+      }) }}
+    </div>
+    
+    {% from "govuk/components/tabs/macro.njk" import govukTabs %}
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+    {% set overviewHtml %}
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email"
+          },
+          value: {
+            text: "info@hooyu.com"
+          }
+        },
+        {
+          key: {
+            text: "Telephone"
+          },
+          value: {
+            text: "+44 (0) 2045511332"
+          }
+        },
+        {
+          key: {
+            text: "Website"
+          },
+          value: {
+            html: "www.hooyu.com"
+          }
+        },
+        {
+          key: {
+            text: "Address"
+          },
+          value: {
+            html: '<p class="govuk-body">Fora, 180 Borough High Street, London, SE1 1LB, United Kingdom</p>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set genericHtml %}
+    Additional content
+    {% endset -%}
+
+    {{ govukTabs({
+      items: [
+        {
+          label: "Overview",
+          id: "overview",
+          panel: {
+            html: overviewHtml
+          }
+        },
+        {
+          label: "Tab for future needs",
+          id: "newtab1",
+          panel: {
+            html: genericHtml
+          }
+        },
+        {
+          label: "Tab for future needs",
+          id: "newtab2",
+          panel: {
+            html: genericHtml
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+{% endblock %}

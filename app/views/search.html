@@ -1,7 +1,7 @@
 {% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block beforeContent %} {{super()}}
-<a class="govuk-back-link" href="/start">Back</a>
-{% endblock %} {% block content %}
+provider - GOV.UK {% endblock %} {% block beforeContent %} {{ govukBreadcrumbs({
+items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
+href: "#" }] }) }} {% endblock %} {% block content %}
 
 <!-- START title -->
 <div class="govuk-grid-row">
@@ -12,203 +12,130 @@ provider - GOV.UK {% endblock %} {% block beforeContent %} {{super()}}
 <div class="govuk-!-padding-bottom-3"></div>
 <!-- END title -->
 
-<!-- START filter -->
 <div class="govuk-grid-row">
+  <!-- START filter -->
   <div class="govuk-grid-column-one-third">
-    <div
-      class="dsit-filter das-!-show--from-tablet"
-      id="fat-filter"
-      tabindex="0"
-    >
-      <div class="dsit-filter__header">
-        <h2 class="govuk-heading-m govuk-!-margin-0">Filter</h2>
-      </div>
-      <div class="dsit-filter__selected-filters">
-        <div class="dsit-filter__selected-header">
-          <h3 class="dsit-filter__selected-heading govuk-heading-s">
-            Selected filters
-          </h3>
-          <a
-            class="dsit-filter__selected-action govuk-link govuk-link--no-visited-state"
-            href="#"
-            >Clear
-            <span class="govuk-visually-hidden">the selected filters</span></a
-          >
-        </div>
-        <h4 class="dsit-filter__selected-sub-heading govuk-heading-s">
-          Scheme type:
-        </h4>
-        <a class="dsit-filter__tag" title="Right to work" href="#"
-          >Right to work</a
-        >
-        <h4 class="dsit-filter__selected-sub-heading govuk-heading-s">
-          Role type:
-        </h4>
-        <a
-          class="dsit-filter__tag"
-          title="Clear this sector filter Creative and design"
-          href="#"
-          >Identity</a
-        >
-        <a
-          class="dsit-filter__tag"
-          title="Clear this sector filter Digital"
-          href="#"
-          >Attribute</a
-        >
-      </div>
-      <div
-        class="dsit-filter__body das-!-show--from-tablet das-show-hide__section"
-        id="fat-filter-options"
-      >
-        <form method="GET" action="#">
-          <button type="submit" class="govuk-button" id="filters-submit">
-            Apply filters
-          </button>
-          <div class="govuk-form-group">
-            <label for="Keyword" class="govuk-label dsit-filter__search-label"
-              >Identity service providers
-              <p class="govuk-hint">Enter a service or keywords</p>
-            </label>
-            <input
-              name="keyword"
-              type="search"
-              title="Search"
-              class="govuk-input"
-              id="Keyword"
-              value=""
-            />
-          </div>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Scheme type:
-              </legend>
-              <div class="govuk-checkboxes govuk-checkboxes--small">
-                <div class="govuk-checkboxes__item">
-                  <input
-                    checked
-                    class="govuk-checkboxes__input"
-                    id="level-2"
-                    name="levels"
-                    type="checkbox"
-                    value="2"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="level-2"
-                  >
-                    Right to work
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input
-                    class="govuk-checkboxes__input"
-                    id="level-3"
-                    name="levels"
-                    type="checkbox"
-                    value="3"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="level-3"
-                  >
-                    Right to rent
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input
-                    class="govuk-checkboxes__input"
-                    id="level-4"
-                    name="levels"
-                    type="checkbox"
-                    value="4"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="level-4"
-                  >
-                    Disclosure and Barring Service
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+    <!-- prettier-ignore -->
+    {%- from "moj/components/filter/macro.njk" import mojFilter -%}
+    {%- from "govuk/components/checkboxes/macro.njk" import govukCheckboxes -%}
+    {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                Role type
-              </legend>
-              <div class="govuk-checkboxes govuk-checkboxes--small">
-                <div class="govuk-checkboxes__item">
-                  <input
-                    checked
-                    class="govuk-checkboxes__input"
-                    id="route-c832e305-fb1a-4ffe-9a3f-7a2cd675059b"
-                    name="sectors"
-                    type="checkbox"
-                    value="Agriculture, environmental and animal care"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="route-c832e305-fb1a-4ffe-9a3f-7a2cd675059b"
-                  >
-                    Identity
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input
-                    checked
-                    class="govuk-checkboxes__input"
-                    id="route-85028bed-f49e-4318-abe6-484bcbb89cad"
-                    name="sectors"
-                    type="checkbox"
-                    value="Business and administration"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="route-85028bed-f49e-4318-abe6-484bcbb89cad"
-                  >
-                    Attribute
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input
-                    class="govuk-checkboxes__input"
-                    id="route-42822f1a-b278-4baf-b651-653623af1aae"
-                    name="sectors"
-                    type="checkbox"
-                    value="Care services"
-                  />
-                  <label
-                    class="govuk-label govuk-checkboxes__label"
-                    for="route-42822f1a-b278-4baf-b651-653623af1aae"
-                  >
-                    Orchestration
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-3">
-              <a
-                class="govuk-link govuk-link--no-visited-state"
-                href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"
-                target="_blank"
-                rel="external"
-                >What are the different provider roles? (opens in a new
-                window)</a
-              >
-            </p>
-          </div>
-          <button type="submit" class="govuk-button" id="filters-submit-second">
-            Apply filters
-          </button>
-        </form>
-      </div>
-    </div>
+    {%- set filterOptionsHtml %}
+
+      {{ govukInput({
+        id: 'keywords',
+        name: 'keywords',
+        label: {
+          text: 'Identity service providers',
+          classes: 'govuk-label--m'
+        }
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: 'type',
+        name: 'type',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Scheme type:',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: '1',
+            text: 'Right to work',
+            checked: true
+          },
+          {
+            value: '2',
+            text: 'Right to rent',
+            checked: true
+          },
+          {
+            value: '3',
+            text: 'Disclosure and Barring Service'
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: 'status',
+        name: 'status',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Role type',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: 'identity',
+            text: 'Identity',
+            checked: true
+          },
+          {
+            value: 'attribute',
+            text: 'Attribute'
+          },
+          {
+            value: 'orchestration',
+            text: 'Orchestration',
+            checked: false
+          }
+        ]
+      }) }}
+    {% endset -%}
+
+    {{ mojFilter({
+      heading: {
+        text: 'Filter'
+      },
+
+      submit: {
+        attributes: {
+            "data-test-id": "submit-button"
+        }
+      },
+
+      selectedFilters: {
+
+        heading: {
+          text: 'Selected filters'
+        },
+
+        clearLink: {
+          text: 'Clear filters'
+        },
+
+        categories: [
+          {
+            heading: {
+              text: 'Scheme type'
+            },
+            items: [{
+              href: '/path/to/remove/this',
+              text: 'Right to work'
+            }, {
+              href: '/path/to/remove/this',
+              text: 'Right to rent'
+            }]
+          },
+          {
+            heading: {
+              text: 'Role type'
+            },
+            items: [{
+              href: '/path/to/remove/this',
+              text: 'Identity'
+            }]
+          }
+        ]
+      },
+      optionsHtml: filterOptionsHtml
+    }) }}
   </div>
-
   <!-- END filter -->
 
   <div class="govuk-grid-column-two-thirds">
@@ -218,17 +145,16 @@ provider - GOV.UK {% endblock %} {% block beforeContent %} {{super()}}
       Sorted by:
       <span class="govuk-!-font-weight-bold">Name</span>
     </p>
+
+    {# @TODO: find a nunjucks alternative to the HTML below #}
+
     <hr
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
     />
     <h2
       class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
     >
-      <a
-        class="das-search-results__link"
-        id="vacancy-aof"
-        href="vacancy-page-aof.html"
-      >
+      <a class="das-search-results__link" id="vacancy-aof" href="company1.html">
         Yoti and Post Office EasyID</a
       >
     </h2>

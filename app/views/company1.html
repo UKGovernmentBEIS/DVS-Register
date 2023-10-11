@@ -1,7 +1,11 @@
 {% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block beforeContent %} {{ govukBreadcrumbs({
+provider - GOV.UK {% endblock %} {% block content %}
+
+<!-- prettier-ignore -->
+{# @TODO: This should belong outside the content area #} 
+{{ govukBreadcrumbs({
 items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
-href: "search" }] }) }} {% endblock %} {% block content %}
+href: "search" }] }) }}
 
 <!-- START title -->
 <div class="govuk-grid-row">

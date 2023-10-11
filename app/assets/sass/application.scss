@@ -8,3 +8,5 @@ $moj-images-path: "/public/images/";
 
 @import "node_modules/@ministryofjustice/frontend/moj/all";
 @import "definition-list";
+@import "search-sort";
+@import "app/components/task-list/task-list";

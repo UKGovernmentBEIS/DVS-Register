@@ -1,12 +1,21 @@
 {% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block beforeContent %} {{ govukBreadcrumbs({
-items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
-href: "#" }] }) }} {% endblock %} {% block content %}
+provider - GOV.UK {% endblock %} {% block content %}
+
+<!-- prettier-ignore -->
+{# @TODO: This should belong outside the content area #} 
+{{ govukBreadcrumbs({ 
+  items: [ { text:"Home", href: "/start" }, { text: "Filter identity providers", href: "#" }] })
+}}
 
 <!-- START title -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Identity providers</h1>
+    <h1 class="govuk-heading-xl">
+      Find an identity provider
+      <span class="govuk-caption-l govuk-!-margin-top-1"
+        >Last updated: 04 October 2023</span
+      >
+    </h1>
   </div>
 </div>
 <div class="govuk-!-padding-bottom-3"></div>
@@ -145,6 +154,35 @@ href: "#" }] }) }} {% endblock %} {% block content %}
       Sorted by:
       <span class="govuk-!-font-weight-bold">Name</span>
     </p>
+    <div class="search-sort">
+      <fieldset>
+        <legend>Sort view</legend>
+        <label aria-pressed="" aria-describe="Results sorted by Random"
+          >Random</label
+        >
+        <a
+          href="/?sort=lastupd"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="descending"
+          aria-describe="Sort results by Last updated"
+          >Last updated</a
+        >
+        <a
+          href="/?sort=a2z"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="ascending"
+          aria-describe="Sort results by A to Z"
+          >A to Z</a
+        >
+        <a
+          href="/?sort=z2a"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="descending"
+          aria-describe="Sort results by Z to A"
+          >Z to A</a
+        >
+      </fieldset>
+    </div>
 
     {# @TODO: find a nunjucks alternative to the HTML below #}
 
@@ -152,23 +190,15 @@ href: "#" }] }) }} {% endblock %} {% block content %}
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
     />
 
-    <h2
-      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
-    >
-      <a class="das-search-results__link" id="vacancy-02" href="company1.html">
-        Hooyu Limited, A MiTek Company</a
-      >
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="vacancy-02" href="company1.html"> SecureID Platform</a>
     </h2>
     <p class="govuk-body" style="color: #505a5f">Sheffield, S1 3FG</p>
-    <p class="govuk-body das-search-results__body">
-      The only and best digital identification services company
-    </p>
-    <dl
-      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
-    >
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
       <dt class="dsit-definition-list__title">Services provided</dt>
       <dd class="dsit-definition-list__definition">
-        Right to work, right to rent
+        Right to Work, Right to Rent, Disclosure and Barring Service
       </dd>
     </dl>
 
@@ -176,20 +206,12 @@ href: "#" }] }) }} {% endblock %} {% block content %}
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
     />
 
-    <h2
-      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
-    >
-      <a class="das-search-results__link" id="vacancy-aof" href="company1.html">
-        Yoti and Post Office EasyID</a
-      >
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="vacancy-aof" href="company1.html">IdentifiedID</a>
     </h2>
     <p class="govuk-body" style="color: #505a5f">Sheffield, S7 3PT</p>
-    <p class="govuk-body das-search-results__body">
-      The only and best digital identification services company
-    </p>
-    <dl
-      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
-    >
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
       <dt class="dsit-definition-list__title">Services provided</dt>
       <dd class="dsit-definition-list__definition">Right to work</dd>
     </dl>
@@ -198,22 +220,15 @@ href: "#" }] }) }} {% endblock %} {% block content %}
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
     />
 
-    <h2
-      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
-    >
-      <a class="das-search-results__link" id="standard-274" href="#">
-        TrustID Limited</a
-      >
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="standard-274" href="#">Global IDSP</a>
     </h2>
     <p class="govuk-body" style="color: #505a5f">Sheffield, S3 7GE</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
-    <p class="govuk-body"><b>Attribute</b> x</p>
-    <dl
-      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
-    >
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
       <dt class="dsit-definition-list__title">Services provided</dt>
       <dd class="dsit-definition-list__definition">
-        Right to work, right to rent
+        Right to Work, Right to Rent
       </dd>
     </dl>
 
@@ -221,45 +236,33 @@ href: "#" }] }) }} {% endblock %} {% block content %}
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
     />
 
-    <h2
-      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-0"
-    >
-      <a class="das-search-results__link" id="standard-274" href="#">
-        OneID Ltd</a
-      >
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+      <a id="standard-274" href="#">Bubble Verify</a>
     </h2>
 
     <p class="govuk-body" style="color: #505a5f">Sheffield, S12 3HL</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
-    <p class="govuk-body"><b>Attribute</b> x</p>
-    <dl
-      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
-    >
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
       <dt class="dsit-definition-list__title">Services provided</dt>
       <dd class="dsit-definition-list__definition">
-        Right to work, right to rent
+        Right to Work, Right to Rent
       </dd>
     </dl>
     <hr
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
     />
 
-    <h2
-      class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1"
-    >
-      <a class="das-search-results__link" id="standard-274" href="#">
-        Paycasso Verify Ltd trading as Xydus</a
-      >
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="standard-274" href="#">Apple Identity</a>
     </h2>
 
     <p class="govuk-body" style="color: #505a5f">Sheffield, S35 8PR</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Attribute</b> x</p>
-    <p class="govuk-body"><b>Attribute</b> x</p>
-    <dl
-      class="dsit-definition-list dsit-definition-list--meta das-search-results__meta"
-    >
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
       <dt class="dsit-definition-list__title">Services provided</dt>
-      <dd class="dsit-definition-list__definition">Right to rent</dd>
+      <dd class="dsit-definition-list__definition">
+        Disclosure and Barring Service
+      </dd>
     </dl>
     <hr
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"

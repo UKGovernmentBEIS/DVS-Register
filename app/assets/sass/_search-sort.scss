@@ -1,0 +1,36 @@
+.search-sort {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  border-top: #bfc1c3 1px solid;
+  padding: 13px 0;
+  margin-bottom: 5px;
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  legend {
+    float: left;
+    padding-right: 15px;
+  }
+
+  a {
+    padding: 0 15px;
+  }
+
+  label {
+    position: relative;
+    padding: 0 15px;
+    font-weight: 700;
+  }
+
+  label::after {
+    content: "•";
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    font-size: 20px;
+  }
+}

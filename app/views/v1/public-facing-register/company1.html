@@ -4,8 +4,8 @@ provider - GOV.UK {% endblock %} {% block content %}
 <!-- prettier-ignore -->
 {# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({
-items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
-href: "search" }] }) }}
+items: [ { text: "Home", href: "/public-facing-register/start" }, { text: "Filter identity providers",
+href: "search" }, { text: "SecureID Platform"}] }) }}
 
 <!-- START title -->
 <div class="govuk-grid-row">
@@ -81,6 +81,38 @@ href: "search" }] }) }}
     }) }}
     {% endset -%}
 
+    {% set certificationInformation %}
+     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Schemes certified against"
+          },
+          value: {
+            text: "Right to Work, Right to Rent, Disclosure and Barring Service"
+          }
+        },
+        {
+          key: {
+            text: "Date of certification"
+          },
+          value: {
+            text: "3 October 2022"
+          }
+        },
+        {
+          key: {
+            text: "Proof of certification"
+          },
+          value: {
+            html: "Certification document"
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
     {% set genericHtml %}
     Additional content
     {% endset -%}
@@ -95,10 +127,10 @@ href: "search" }] }) }}
           }
         },
         {
-          label: "Tab for future needs",
-          id: "newtab1",
+          label: "Certification information",
+          id: "certification-information",
           panel: {
-            html: genericHtml
+            html: certificationInformation
           }
         },
         {

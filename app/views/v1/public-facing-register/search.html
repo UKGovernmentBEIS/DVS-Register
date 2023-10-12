@@ -4,7 +4,7 @@ provider - GOV.UK {% endblock %} {% block content %}
 <!-- prettier-ignore -->
 {# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({ 
-  items: [ { text:"Home", href: "/start" }, { text: "Filter identity providers", href: "#" }] })
+  items: [ { text:"Home", href: "/v1/public-facing-register/start" }, { text: "Filter identity providers", href: "#" }] })
 }}
 
 <!-- START title -->
@@ -53,13 +53,11 @@ provider - GOV.UK {% endblock %} {% block content %}
         items: [
           {
             value: '1',
-            text: 'Right to work',
-            checked: true
+            text: 'Right to work'
           },
           {
             value: '2',
-            text: 'Right to rent',
-            checked: true
+            text: 'Right to rent'
           },
           {
             value: '3',
@@ -81,8 +79,7 @@ provider - GOV.UK {% endblock %} {% block content %}
         items: [
           {
             value: 'identity',
-            text: 'Identity',
-            checked: true
+            text: 'Identity'
           },
           {
             value: 'attribute',
@@ -90,8 +87,7 @@ provider - GOV.UK {% endblock %} {% block content %}
           },
           {
             value: 'orchestration',
-            text: 'Orchestration',
-            checked: false
+            text: 'Orchestration'
           }
         ]
       }) }}
@@ -106,41 +102,6 @@ provider - GOV.UK {% endblock %} {% block content %}
         attributes: {
             "data-test-id": "submit-button"
         }
-      },
-
-      selectedFilters: {
-
-        heading: {
-          text: 'Selected filters'
-        },
-
-        clearLink: {
-          text: 'Clear filters'
-        },
-
-        categories: [
-          {
-            heading: {
-              text: 'Scheme type'
-            },
-            items: [{
-              href: '/path/to/remove/this',
-              text: 'Right to work'
-            }, {
-              href: '/path/to/remove/this',
-              text: 'Right to rent'
-            }]
-          },
-          {
-            heading: {
-              text: 'Role type'
-            },
-            items: [{
-              href: '/path/to/remove/this',
-              text: 'Identity'
-            }]
-          }
-        ]
       },
       optionsHtml: filterOptionsHtml
     }) }}

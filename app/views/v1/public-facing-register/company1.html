@@ -4,8 +4,8 @@ provider - GOV.UK {% endblock %} {% block content %}
 <!-- prettier-ignore -->
 {# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({
-items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
-href: "search" }] }) }}
+items: [ { text: "Home", href: "/public-facing-register/start" }, { text: "Filter identity providers",
+href: "search" }, { text: "SecureID Platform"}] }) }}
 
 <!-- START title -->
 <div class="govuk-grid-row">
@@ -14,7 +14,7 @@ href: "search" }] }) }}
       <span class="govuk-caption-l"
         >Identity provider<span class="govuk-visually-hidden">:</span></span
       >
-      Hooyu Limited, A MiTek Company
+      SecureID Platform
     </h1>
   </div>
 </div>
@@ -23,7 +23,7 @@ href: "search" }] }) }}
 <!-- prettier-ignore -->
 <div class="govuk-grid-row">`
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-!-padding-bottom-9">
+    <div class="govuk-!-padding-bottom-2">
       <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Schemes certified against:</p>
       {%- from "govuk/components/tag/macro.njk" import govukTag -%}
       {{ govukTag({
@@ -36,6 +36,16 @@ href: "search" }] }) }}
         text: "Discoloure and Barring Service"
       }) }}
     </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Published: 20 June 2021</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Last updated: 30 August 2022</p>
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-7"></div>
+
     
     {% from "govuk/components/tabs/macro.njk" import govukTabs %}
     {% from "govuk/components/table/macro.njk" import govukTable %}
@@ -47,10 +57,18 @@ href: "search" }] }) }}
       rows: [
         {
           key: {
+            text: "Identity profiles"
+          },
+          value: {
+            text: "L1A, L1B, L1C, L2A, L2B, L2C"
+          }
+        },
+        {
+          key: {
             text: "Email"
           },
           value: {
-            text: "info@hooyu.com"
+            text: "info@secureidplatform.com"
           }
         },
         {
@@ -66,7 +84,7 @@ href: "search" }] }) }}
             text: "Website"
           },
           value: {
-            html: "www.hooyu.com"
+            html: "www.secureidplatform.com"
           }
         },
         {
@@ -74,7 +92,46 @@ href: "search" }] }) }}
             text: "Address"
           },
           value: {
-            html: '<p class="govuk-body">Fora, 180 Borough High Street, London, SE1 1LB, United Kingdom</p>'
+            html: '<p class="govuk-body">Fora, 180 Borough High Street, London, SE31 1LB, United Kingdom</p>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set certificationInformation %}
+     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Schemes certified against"
+          },
+          value: {
+            text: "Right to Work, Right to Rent, Disclosure and Barring Service"
+          }
+        },
+        {
+          key: {
+            text: "Date of certification"
+          },
+          value: {
+            text: "3 October 2022"
+          }
+        },
+        {
+          key: {
+            text: "Proof of certification"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Certification document",
+                visuallyHiddenText: "name",
+                classes: "abc"
+              }
+            ]
           }
         }
       ]
@@ -82,7 +139,7 @@ href: "search" }] }) }}
     {% endset -%}
 
     {% set genericHtml %}
-    Additional content
+    
     {% endset -%}
 
     {{ govukTabs({
@@ -95,14 +152,14 @@ href: "search" }] }) }}
           }
         },
         {
-          label: "Tab for future needs",
-          id: "newtab1",
+          label: "Certification information",
+          id: "certification-information",
           panel: {
-            html: genericHtml
+            html: certificationInformation
           }
         },
         {
-          label: "Tab for future needs",
+          label: "Other",
           id: "newtab2",
           panel: {
             html: genericHtml

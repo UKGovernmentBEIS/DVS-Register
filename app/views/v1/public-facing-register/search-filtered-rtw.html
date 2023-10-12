@@ -53,7 +53,8 @@ provider - GOV.UK {% endblock %} {% block content %}
         items: [
           {
             value: '1',
-            text: 'Right to work'
+            text: 'Right to work',
+            checked: true
           },
           {
             value: '2',
@@ -100,9 +101,31 @@ provider - GOV.UK {% endblock %} {% block content %}
 
       submit: {
         attributes: {
-            "data-test-id": "submit-button",
-            onclick: "window.location.href = '/v1/public-facing-register/search-filtered-rtw';"
+            "data-test-id": "submit-button"
         }
+      },
+      selectedFilters: {
+
+        heading: {
+          text: 'Selected filters'
+        },
+
+        clearLink: {
+          text: 'Clear filters',
+          href: '/search'
+        },
+
+        categories: [
+          {
+            heading: {
+              text: 'Scheme type'
+            },
+            items: [{
+              href: '/path/to/remove/this',
+              text: 'Right to work'
+            }]
+          }
+        ]
       },
       optionsHtml: filterOptionsHtml
     }) }}
@@ -111,7 +134,7 @@ provider - GOV.UK {% endblock %} {% block content %}
 
   <div class="govuk-grid-column-two-thirds">
     <!-- START cards -->
-    <h2 class="govuk-heading-m">43 results</h2>
+    <h2 class="govuk-heading-m">4 results</h2>
     <div class="search-sort">
       <fieldset>
         <legend>Sort view</legend>
@@ -149,6 +172,22 @@ provider - GOV.UK {% endblock %} {% block content %}
     />
 
     <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="standard-274" href="#">Global IDSP</a>
+    </h2>
+    <p class="govuk-body" style="color: #505a5f">Sheffield, S3 7GE</p>
+    <p class="govuk-body">A digital identification services company</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Services provided</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to Work, Right to Rent
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
+    />
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
       <a id="vacancy-02" href="company1.html"> SecureID Platform</a>
     </h2>
     <p class="govuk-body" style="color: #505a5f">Sheffield, S1 3FG</p>
@@ -178,22 +217,6 @@ provider - GOV.UK {% endblock %} {% block content %}
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
     />
 
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
-      <a id="standard-274" href="#">Global IDSP</a>
-    </h2>
-    <p class="govuk-body" style="color: #505a5f">Sheffield, S3 7GE</p>
-    <p class="govuk-body">A digital identification services company</p>
-    <dl class="dsit-definition-list dsit-definition-list--meta">
-      <dt class="dsit-definition-list__title">Services provided</dt>
-      <dd class="dsit-definition-list__definition">
-        Right to Work, Right to Rent
-      </dd>
-    </dl>
-
-    <hr
-      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
-    />
-
     <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
       <a id="standard-274" href="#">Bubble Verify</a>
     </h2>
@@ -209,28 +232,7 @@ provider - GOV.UK {% endblock %} {% block content %}
     <hr
       class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
     />
-
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
-      <a id="standard-274" href="#">Apple Identity</a>
-    </h2>
-
-    <p class="govuk-body" style="color: #505a5f">Sheffield, S35 8PR</p>
-    <p class="govuk-body">A digital identification services company</p>
-    <dl class="dsit-definition-list dsit-definition-list--meta">
-      <dt class="dsit-definition-list__title">Services provided</dt>
-      <dd class="dsit-definition-list__definition">
-        Disclosure and Barring Service
-      </dd>
-    </dl>
-    <hr
-      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
-    />
     <!-- END cards -->
-
-    {% from "govuk/components/pagination/macro.njk" import govukPagination %} {%
-    from "govuk/components/pagination/macro.njk" import govukPagination %} {{
-    govukPagination({ next: { href: "#" }, items: [ { number: 1, current: true,
-    href: "#" }, { number: 2, href: "#" }, { number: 3, href: "#" } ] }) }}
   </div>
 
   {% endblock %}

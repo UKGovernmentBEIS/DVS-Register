@@ -1,12 +1,43 @@
+<!-- prettier-ignore -->
 {# For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/docs/how-to-use-layouts #} {% extends
-"govuk-prototype-kit/layouts/govuk-branded.njk" %} {% block beforeContent %}
+"govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{% block header %} 
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: serviceName,
+  serviceUrl: "/",
+  navigation: [
+    {
+      href: "/v1/public-facing-register/search",
+      text: "Search",
+      active: pageActive
+    },
+    {
+      href: "/v1/public-facing-register/help",
+      text: "Help",
+      active: pageActive
+    },
+    {
+      href: "#",
+      text: "About",
+      active: pageActive
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag"
-      >ALPHA</strong
+    <strong class="govuk-tag govuk-phase-banner__content__tag">ALPHA</strong>
+    <span class="govuk-phase-banner__text"
+      >This is a new service - your <a href="#">feedback</a> will help us
+      improve it.</span
     >
-    <span class="govuk-phase-banner__text">This is a new service - your <a href"#">feedback</a> will help us improve it.</span>
   </p>
 </div>
 

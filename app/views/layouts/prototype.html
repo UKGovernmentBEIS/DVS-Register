@@ -12,17 +12,19 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts #} {% extends
   serviceUrl: "/",
   navigation: [
     {
-      href: "#",
+      href: "/v1/public-facing-register/search",
       text: "Search",
-      active: true
+      active: pageActive
     },
     {
       href: "/v1/public-facing-register/help",
-      text: "Help"
+      text: "Help",
+      active: pageActive
     },
     {
       href: "#",
-      text: "About"
+      text: "About",
+      active: pageActive
     }
   ]
 }) }}

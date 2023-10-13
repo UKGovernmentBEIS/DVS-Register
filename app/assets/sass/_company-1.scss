@@ -1,0 +1,41 @@
+.govuk-summary-card__title-wrapper {
+  display: block;
+}
+
+.js-enabled .govuk-tabs__panel{
+    padding-bottom: 0;
+}
+
+.tab-header{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.section-header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.check-status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-comment{
+    margin-left:14rem;
+}
+
+.table-color{
+    background-color: #f3f2f1;
+}
+.overview-container{
+    background: 	#1d70b8 !important;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.publish-review{
+    background-color: #f3f2f1;
+}

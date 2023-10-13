@@ -1,0 +1,679 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} OfDIA Review Platform {% endblock %} {% block header %}
+
+
+<div class="govuk-grid-row">
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="left clear">
+                <h2 class="govuk-heading-m-white header-heading">OfDIA Review Platform</h2>
+            </div>
+            <div class="right"><strong class="govuk-tag ">
+                    Administrator View
+                </strong>
+                |
+                <a class="govuk-header__link" href="#">
+                    <strong>
+                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Icon: Chevron" clip-path="url(#clip0_37814_2232)">
+                                <path id="Icon: Chevron_2" d="M14 1.5L7.5 8L1 1.5" stroke="white" stroke-width="2" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_37814_2232">
+                                    <rect width="15" height="10" fill="white"
+                                        transform="translate(15 10) rotate(-180)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        Menu</strong>
+                </a>
+                |
+                <a class="govuk-header__link" href="#">
+                    <strong>Sign Out</strong>
+                </a>
+            </div>
+
+        </div>
+    </header>
+</div>
+
+
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">Dashboard</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="#">HDJ21123F Case Review</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">File browser</h2>
+                    <br />
+                    <a href="#">Add a new file</a>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Avocado.pdf</p>
+                            11-Jul-'23 03:16 PM by OfDodo
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View<br></a>
+                            <br />
+                        </div>
+
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Avocado.pdf</p>
+                            11-Jul-'23 03:16 PM by OfDodo
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View<br></a>
+                            <br />
+                        </div>
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Avocado.pdf</p>
+                            11-Jul-'23 03:16 PM by OfDodo
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View<br></a>
+                            <br />
+                        </div>
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Avocado.pdf</p>
+                            11-Jul-'23 03:16 PM by OfDodo
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View<br></a>
+                            <br />
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Case History</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Inital Checks Approved</p>
+                            11-Jul-'23 03:16 PM by OfDodo
+                            <br />
+                            <span class="case-text">Case DFD312G</span>
+                            <br />
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                            <br />
+                        </div>
+
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Information Submitted</p>
+                            27-Jan-'22 10:46 PM by Ada
+                            <br />
+                            <span class="case-text">Case DFD312G</span>
+                            <br />
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                            <br />
+                        </div>
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">New things happened</p>
+                            07-Mar-'22 07:03 AM by Dan
+
+                            <br />
+                            <span class="case-text">Case DFD312G</span>
+                            <br />
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                            <br />
+                        </div>
+                        <div class="govuk-summary-list__row recent-activity-item">
+                            <p class="govuk-heading-s">Case Created Digitally</p>
+                            27-Jan-'22 10:46 PM by Ada
+                            <br />
+                            <span class="case-text">Case DFD312G</span>
+                            <br />
+                            <a href="#" class="govuk-link govuk-!-text-align-right">View Details</a>
+                            <br />
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Case Review</h1>
+            <br />
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#past-day">
+                            Initial Checks
+                        </a>
+
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#secondary-checks">
+                            Secondary Checks
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#publishing-review">
+                            Publishing Review
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="govuk-tabs__panel" id="past-day">
+
+
+                    <div class="tab-header">
+                        <h2 class="govuk-heading-l">Initial Checks</h2>
+                        <div>
+                            <strong class="govuk-tag govuk-tag--green">
+                                PASSED REVIEW
+                            </strong>
+                        </div>
+                    </div>
+
+
+
+                    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                        Name and address of Certification body
+                                        <strong class="govuk-tag govuk-tag--green">
+                                            PASSED REVIEW
+                                        </strong>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-1">
+                                <p class="govuk-body">This is the content for Writing well for the web.</p>
+                            </div>
+                        </div>
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <div class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                                        <div class="section-header">
+                                            Date certification is granted
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--green">
+                                                    PASSED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-2">
+                                <p class="govuk-body">This is the content for Writing well for specialists.</p>
+                            </div>
+                        </div>
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                                        <div class="section-header">
+                                            Name and Address of Client
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--green">
+                                                    PASSED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-3" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-3">
+                                <p class="govuk-body">This is the content for Know your audience.</p>
+                            </div>
+                        </div>
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                                        <div class="section-header">
+                                            Scope of Certification
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--green">
+                                                    PASSED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-4">
+                                <p class="govuk-body">This is the content for How people read.</p>
+                            </div>
+                        </div>
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                                        <div class="section-header">
+                                            Term of Expiry of Certification
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--green">
+                                                    PASSED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-4">
+                                <p class="govuk-body">This is the content for How people read.</p>
+                            </div>
+                        </div>
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                                        <div class="section-header">
+
+
+                                            Any other information Required
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--green">
+                                                    PASSED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-4">
+                                <div class="check-status">
+                                    <h1 class="govuk-heading-m">Change check status</h1>
+                                    <div class="check-status-toolbar">
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" id="sort" name="sort">
+                                                <option value="published">Passed Review</option>
+                                                <option value="updated" selected>Failed Review</option>
+                                            </select>
+                                        </div>
+                                        <button class="govuk-button" data-module="govuk-button">
+                                            Submit Change
+                                        </button>
+                                    </div>
+                                </div>
+                                <table class="govuk-table table-color">
+                                    <caption class="govuk-table__caption govuk-table__caption--m">Checks History
+                                        <button class="govuk-button new-comment">Add a new comment</button>
+                                    </caption>
+
+                                    <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                            <th scope="col" class="govuk-table__header">Author + Timestamp</th>
+                                            <th scope="col" class="govuk-table__header">
+                                                Comment</th>
+                                            <th scope="col" class="govuk-table__header">
+                                                Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-header">
+                        <h1 class="govuk-heading-l"> All Checks Complete?</h1>
+
+                        <div>
+                            {{ govukButton({ text: "Checks Complete?", href: "#secondary-checks", isStartButton: false
+                            })
+                            }}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                    <h2 class="govuk-heading-l">Past week</h2>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="secondary-checks">
+                    <div class="tab-header">
+                        <h2 class="govuk-heading-l">Secondary Checks</h2>
+                        <div>
+                            <strong class="govuk-tag govuk-tag--yellow">
+                                REVIEW IN PROGRESS
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+
+                                    <button type="button" aria-controls="accordion-default-content-2"
+                                        class="govuk-accordion__section-button" aria-expanded="false" aria-label="Date certification is granted
+PASSED REVIEW , Show this section"><span class="govuk-accordion__section-heading-text"
+                                            id="accordion-default-heading-2"><span
+                                                class="govuk-accordion__section-heading-text-focus">
+                                                <div class="section-header">
+                                                    Legal Status Checks
+                                                    <div>
+                                                        <strong class="govuk-tag govuk-tag--green">
+                                                            PASSED REVIEW
+                                                        </strong>
+                                                    </div>
+                                                </div>
+                            </div>
+                            <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-2" hidden="until-found">
+                                <p class="govuk-body">This is the content for Writing well for specialists.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                                        <div class="section-header">
+
+
+                                            Any other information Required
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--yellow">
+                                                    REVIEW IN PROGRESS
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-4" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-4">
+                                <div class="check-status">
+                                    <h1 class="govuk-heading-m">Change check status</h1>
+                                    <div class="check-status-toolbar">
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" id="sort" name="sort">
+                                                <option value="published">Passed Review</option>
+                                                <option value="updated" selected>Failed Review</option>
+                                            </select>
+                                        </div>
+                                        <button class="govuk-button" data-module="govuk-button">
+                                            Submit Change
+                                        </button>
+                                    </div>
+                                </div>
+                                <table class="govuk-table table-color">
+                                    <caption class="govuk-table__caption govuk-table__caption--m">Checks History
+                                        <button class="govuk-button new-comment">Add a new comment</button>
+                                    </caption>
+
+                                    <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                            <th scope="col" class="govuk-table__header">Author + Timestamp</th>
+                                            <th scope="col" class="govuk-table__header">
+                                                Comment</th>
+                                            <th scope="col" class="govuk-table__header">
+                                                Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">03 Oct 2023 14:30<br />
+                                                <a href="#">@Jamie E</a>
+                                            </td>
+                                            <td class="govuk-table__cell govuk-table__cell">Lorem Ipsum is simply dummy
+                                                text of the printing and typesetting industry. Lorem Ipsum has been the
+                                                industry's standard dummy text ever since the... (...)</td>
+                                            <td class="govuk-table__cell govuk-table__cell"><a href="#">View Comment</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <div class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                                        <div class="section-header">
+                                            Turpentine Review
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--grey">
+                                                    YET TO REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-2">
+                                <p class="govuk-body">This is the content for Writing well for specialists.</p>
+                            </div>
+                        </div>
+
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <div class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                                        <div class="section-header">
+                                            More Checks
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--red">
+                                                    FAILED REVIEW
+                                                </strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-2">
+                                <p class="govuk-body">This is the content for Writing well for specialists.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-header">
+                        <h1 class="govuk-heading-l"> All Checks Complete?</h1>
+
+                        <div>
+                            {{ govukButton({ text: "Checks Complete?", href: "#secondary-checks", isStartButton: false,
+                            disabled: true
+                            })
+                            }}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="publishing-review">
+
+
+                    <div class="tab-header">
+                        <h2 class="govuk-heading-l">Publishing Review</h2>
+                        <div>
+                            <strong class="govuk-tag govuk-tag--yellow">
+                                REVIEW IN PROGRESS
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                                    <div class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                                        <div class="section-header">
+                                            Content Review
+                                            <div>
+                                                <strong class="govuk-tag govuk-tag--yellow">
+                                                    REVIEW IN PROGRESS
+                                                </strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </h2>
+                            </div>
+                            <div id="accordion-default-content-2" class="govuk-accordion__section-content"
+                                aria-labelledby="accordion-default-heading-2">
+                                <dl class="govuk-summary-list publish-review">
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Identity Profiles
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            L1A, L1B, L1C, L2A, L2B, L2C
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Email
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            info@secureidplatform.com
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Telephone
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            +44 (0) 2045511332
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Website
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            
+                                            <p class="govuk-body">www.secureidplatform.com</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Address
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            
+                                            <p class="govuk-body">Fora, 180 Borough High Street, London, SE31 1LB, United Kingdom</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Schemes certified against
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            
+                                            <p class="govuk-body">Right to Work, Right to Rent, Disclosure and Barring Service</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Date of certification
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            <p class="govuk-body">3 October 2022</p>
+                                        </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Proof of certification
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            <a href="#">Certification document</a>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h1 class="govuk-heading-l"> Ready to Publish?</h1>
+
+                        <div>
+                            {{ govukButton({ text: "Publish to the register", isStartButton: false
+                            })
+                            }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

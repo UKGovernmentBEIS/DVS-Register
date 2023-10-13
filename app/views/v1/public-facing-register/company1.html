@@ -4,7 +4,7 @@ provider - GOV.UK {% endblock %} {% block content %}
 <!-- prettier-ignore -->
 {# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({
-items: [ { text: "Home", href: "/public-facing-register/start" }, { text: "Filter identity providers",
+items: [ { text: "Home", href: "v1/public-facing-register/start" }, { text: "Find an identity provider",
 href: "search" }, { text: "SecureID Platform"}] }) }}
 
 <!-- START title -->
@@ -33,7 +33,7 @@ href: "search" }, { text: "SecureID Platform"}] }) }}
         text: "Right to rent"
       }) }}
       {{ govukTag({
-        text: "Discoloure and Barring Service"
+        text: "Disclosure and Barring Service"
       }) }}
     </div>
     <div class="govuk-grid-row">
@@ -55,14 +55,6 @@ href: "search" }, { text: "SecureID Platform"}] }) }}
 
     {{ govukSummaryList({
       rows: [
-        {
-          key: {
-            text: "Identity profiles"
-          },
-          value: {
-            text: "L1A, L1B, L1C, L2A, L2B, L2C"
-          }
-        },
         {
           key: {
             text: "Email"
@@ -103,6 +95,14 @@ href: "search" }, { text: "SecureID Platform"}] }) }}
      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
     {{ govukSummaryList({
       rows: [
+        {
+          key: {
+            text: "Identity profiles"
+          },
+          value: {
+            text: "L1A, L1B, L1C, L2A, L2B, L2C"
+          }
+        },
         {
           key: {
             text: "Schemes certified against"

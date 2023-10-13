@@ -1,11 +1,12 @@
 {% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block content %}
-
+provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- prettier-ignore -->
-{# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({
-items: [ { text: "Home", href: "v1/public-facing-register/start" }, { text: "Find an identity provider",
+items: [ { text: "Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider",
 href: "search" }, { text: "SecureID Platform"}] }) }}
+{% endblock %}
+
+{% block content %}
 
 <!-- START title -->
 <div class="govuk-grid-row">
@@ -123,15 +124,11 @@ href: "search" }, { text: "SecureID Platform"}] }) }}
           key: {
             text: "Proof of certification"
           },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Certification document",
-                visuallyHiddenText: "name",
-                classes: "abc"
-              }
-            ]
+          key: {
+            text: "Proof of certification"
+          },
+          value: {
+            html: '<a href="#" class="govuk-link">Certification document</a>'
           }
         }
       ]

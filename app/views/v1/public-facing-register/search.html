@@ -1,11 +1,14 @@
 {% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block content %}
-
+provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- prettier-ignore -->
-{# @TODO: This should belong outside the content area #} 
 {{ govukBreadcrumbs({ 
   items: [ { text:"Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider", href: "#" }] })
 }}
+
+{% endblock %}
+
+
+{% block content %}
 
 <!-- START title -->
 <div class="govuk-grid-row">

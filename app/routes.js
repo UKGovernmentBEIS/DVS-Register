@@ -8,7 +8,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-const version = 'v1';
+const version = 'v2';
 
 router.get('/', function(req, res){
     res.redirect('/'+version+'/public-facing-register/start');

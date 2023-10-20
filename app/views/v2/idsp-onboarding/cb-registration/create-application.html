@@ -1,0 +1,72 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }} {% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Create an application</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "IDSP Trading Name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "trading-name",
+      name: "tradingName"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "IDSP Company Name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "company-name",
+      name: "companyName"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Unique Reference Number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "The IDSP you are applying for should have provided you with this number."
+      },
+      id: "unique-ref-number",
+      name: "uniqueRefNumber"
+    }) }}
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

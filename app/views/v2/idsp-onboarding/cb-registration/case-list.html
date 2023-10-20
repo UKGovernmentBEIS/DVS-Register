@@ -1,0 +1,333 @@
+{% extends "layouts/prototype-cb.html" %} {% block pageTitle %} Find an identity
+provider - GOV.UK {% endblock %} {% block beforeContent %} {{ govukBreadcrumbs({
+items: [ { text: "Home", href: "/start" }, { text: "Filter identity providers",
+href: "#" }] }) }} {% endblock %} {% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Case List</h1>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-3"></div>
+<!-- END title -->
+
+<div class="govuk-grid-row">
+  <!-- START filter -->
+  <div class="govuk-grid-column-one-third">
+    <!-- prettier-ignore -->
+    {%- from "moj/components/filter/macro.njk" import mojFilter -%}
+    {%- from "govuk/components/checkboxes/macro.njk" import govukCheckboxes -%}
+    {%- from "govuk/components/input/macro.njk" import govukInput -%}
+
+    {%- set filterOptionsHtml %}
+
+      {{ govukCheckboxes({
+        idPrefix: 'type',
+        name: 'type',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Schemes certified against:',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: '1',
+            text: 'Right to work',
+            checked: true
+          },
+          {
+            value: '2',
+            text: 'Right to rent',
+            checked: true
+          },
+          {
+            value: '3',
+            text: 'Disclosure and Barring Service'
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: 'status',
+        name: 'status',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Status',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: 'in-progress',
+            text: 'In progresss',
+            checked: true
+          },
+          {
+            value: 'submitted',
+            text: 'Submitted'
+          },
+          {
+            value: 'in-review',
+            text: 'In review',
+            checked: false
+          },
+          {
+            value: 'approved',
+            text: 'Approved for Publishing',
+            checked: false
+          }
+        ]
+      }) }}
+    {% endset -%}
+
+    {{ mojFilter({
+      heading: {
+        text: 'Filter'
+      },
+
+      submit: {
+        attributes: {
+            "data-test-id": "submit-button"
+        }
+      },
+      optionsHtml: filterOptionsHtml
+    }) }}
+  </div>
+  <!-- END filter -->
+
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {%- from "moj/components/search/macro.njk" import mojSearch -%}
+
+        {{ mojSearch({
+          action: '#',
+          method: 'post',
+          input: {
+            id: 'search',
+            name: 'search'
+          },
+          label: {
+            text: 'Search',
+            classes: 'govuk-!-font-weight-bold'
+          },
+          hint: {
+            text: 'Enter the IDSP company or unique reference code'
+          },
+          button: {
+            text: 'Search'
+          }
+        }) }}
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-4"></div>
+    <h3 class="govuk-heading-m">Your cases</h3>
+    <p>You have completed <strong>0</strong> of <strong>5</strong> sections.</p>
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <!-- prettier-ignore -->
+    {%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+    {{ govukTable({
+      attributes: {
+        'data-module': 'moj-sortable-table'
+      },
+      head: [
+        {
+          text: "IDSP",
+          attributes: {
+            "aria-sort": "ascending"
+          }
+        },
+        {
+          text: "Reference #",
+          attributes: {
+            "aria-sort": "none"
+          }
+        },
+        {
+          text: "Scheme certified against",
+          attributes: {
+            "aria-sort": "none"
+          }
+        },
+        {
+          text: "Status",
+          attributes: {
+            "aria-sort": "none"
+          },
+          format: "numeric"
+        },
+        {
+          text: "Time of last activity",
+          attributes: {
+            "aria-sort": "none"
+          },
+          format: "numeric"
+        },
+        {
+          text: "Details",
+          attributes: {
+            "aria-sort": "none"
+          },
+          format: "numeric"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "Aconcagua"
+          },
+          {
+            text: "6,961 meters",
+            attributes: {
+              "data-sort-value": "6961"
+            }
+          },
+          {
+            text: "South America"
+          },
+          {
+            text: "1897",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1897"
+            }
+          }
+        ],
+        [
+          {
+            text: "Denali"
+          },
+          {
+            text: "6,194 meters",
+            attributes: {
+              "data-sort-value": "6194"
+            }
+          },
+          {
+            text: "North America"
+          },
+          {
+            text: "1913",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1913"
+            }
+          }
+        ],
+        [
+          {
+            text: "Elbrus"
+          },
+          {
+            text: "5,642 meters",
+            attributes: {
+              "data-sort-value": "5642"
+            }
+          },
+          {
+            text: "Europe"
+          },
+          {
+            text: "1874",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1874"
+            }
+          }
+        ],
+        [
+          {
+            text: "Everest"
+          },
+          {
+            text: "8,850 meters",
+            attributes: {
+              "data-sort-value": "8850"
+            }
+          },
+          {
+            text: "Asia"
+          },
+          {
+            text: "1953",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1953"
+            }
+          }
+        ],
+        [
+          {
+            text: "Kilimanjaro"
+          },
+          {
+            text: "5,895 meters",
+            attributes: {
+              "data-sort-value": "5895"
+            }
+          },
+          {
+            text: "Africa"
+          },
+          {
+            text: "1889",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1889"
+            }
+          }
+        ],
+        [
+          {
+            text: "Puncak Jaya"
+          },
+          {
+            text: "4,884 meters",
+            attributes: {
+              "data-sort-value": "4884"
+            }
+          },
+          {
+            text: "Australia"
+          },
+          {
+            text: "1962",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1962"
+            }
+          }
+        ],
+        [
+          {
+            text: "Vinson"
+          },
+          {
+            text: "4,897 meters",
+            attributes: {
+              "data-sort-value": "4897"
+            }
+          },
+          {
+            text: "Antarctica"
+          },
+          {
+            text: "1966",
+            format: "numeric",
+            attributes: {
+              "data-sort-value": "1966"
+            }
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }} {% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Create an account</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      You'll be able to save and return to your applications as often as you
+      need to.
+    </p>
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "Email address",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "email",
+      disabled: true,
+      name: "email",
+      value: "applications@defcab.com"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "Not your preferred email address?",
+      text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+    }) }}
+
+
+    {{ govukInput({
+      label: {
+        text: "Password",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      type: "password",
+      id: "password",
+      name: "password"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Confirm Password",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      type: "password",
+      id: "confirm-password",
+      name: "confirmPassword"
+    }) }}
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

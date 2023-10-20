@@ -10,6 +10,10 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 const version = 'v2';
 
+router.get('/start', function(req, res){
+    res.redirect('/'+version+'/public-facing-register/start');
+});
+
 router.get('/', function(req, res){
     res.redirect('/'+version+'/public-facing-register/start');
 });
@@ -27,6 +31,6 @@ router.get('/company1', function(req, res){
 
 
 // Temporary Routing for the IDSP Onboarding, full journey will be fleshed out
-router.get('/'+version+'/idsp-onboarding', function(req, res){
-    res.redirect('/'+version+'/idsp-onboarding/application-portal/start');
+router.get('/'+version+'/idsp-onboarding/ofdia-dashboard', function(req, res){
+    res.redirect('/'+version+'/idsp-onboarding/ofdia-dashboard/start');
 });

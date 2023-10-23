@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+Register as a digital service provider
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader({
+homepageUrl: "#",
+serviceName: "Register as a digital service provider",
+serviceUrl: "#",
+navigation: [
+{
+href: "#",
+text: "Search",
+active: true
+},
+{
+href: "#",
+text: "About"
+},
+{
+href: "#",
+text: "Help"
+}
+]
+}) }}
+
+
+<div class="govuk-width-container">
+    {{ govukBreadcrumbs({
+    items: [
+    {
+    text: "Home",
+    href: "#"
+    }
+    ]
+    }) }}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">
+                Read declaration
+            </h1>
+            <br />
+            <br />
+
+            <p class="govuk-body">By submitting this form, you confirm that to the best of your knowledge and belief the
+                information you have given is correct.</p>
+            <br />
+
+            <p class="govuk-body">I understand that the data I have given can be used as set out in the <a
+                    href="#">privacy policy.</a></p>
+
+            <br />
+
+            <p class="govuk-body">I consent to organisations, including financial institutions, providing information to
+                the gov.uk requested in relation to this application.</p>
+            <br />
+            <p class="govuk-body">I agree to the <a href="#">terms and conditions</a></p>
+
+            <br />
+
+            <p class="govuk-body">I understand that if I give false information that the submission can be refused and I
+                may be prosecuted.</p>
+
+            <br />
+            <br />
+
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none"
+                    data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                    I confirm that if I understand and accept this declaration.
+                </label>
+            </div>
+            <br />
+            <br />
+            {{ govukButton({
+                text: "Continue",
+                href: "info-1.html",
+                isStartButton: false
+              }) }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

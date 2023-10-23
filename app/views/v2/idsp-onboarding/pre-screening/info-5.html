@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+Register as a digital service provider
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader({
+homepageUrl: "#",
+serviceName: "Register as a digital service provider",
+serviceUrl: "#",
+navigation: [
+{
+href: "#",
+text: "Search",
+active: true
+},
+{
+href: "#",
+text: "About"
+},
+{
+href: "#",
+text: "Help"
+}
+]
+}) }}
+
+
+<div class="govuk-width-container">
+    {{ govukBreadcrumbs({
+    items: [
+    {
+    text: "Home",
+    href: "#"
+    }
+    ]
+    }) }}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">
+                Submit information for an initial assessment
+            </h1>
+            <br />
+            <br />
+            <div class="govuk-form-group">
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--m" for="more-detail">
+                            Is there any other information that you would like to provide to assist your application?
+                        </label>
+                    </h1>
+                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                        aria-describedby="more-detail-hint"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="file-upload-1">
+                        Upload any relevant document to support the information provided above.
+                    </label>
+                    <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+                  </div>
+                </div>
+
+                <br />
+                {{ govukButton({
+                    text: "Continue",
+                    href: "info-6.html",
+                    isStartButton: false
+                    }) }}
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

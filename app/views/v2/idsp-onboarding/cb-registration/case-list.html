@@ -13,321 +13,282 @@ href: "#" }] }) }} {% endblock %} {% block content %}
 <!-- END title -->
 
 <div class="govuk-grid-row">
-  <!-- START filter -->
   <div class="govuk-grid-column-one-third">
     <!-- prettier-ignore -->
-    {%- from "moj/components/filter/macro.njk" import mojFilter -%}
-    {%- from "govuk/components/checkboxes/macro.njk" import govukCheckboxes -%}
-    {%- from "govuk/components/input/macro.njk" import govukInput -%}
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-    {%- set filterOptionsHtml %}
-
-      {{ govukCheckboxes({
-        idPrefix: 'type',
-        name: 'type',
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-          legend: {
-            text: 'Schemes certified against:',
-            classes: 'govuk-fieldset__legend--m'
-          }
-        },
-        items: [
-          {
-            value: '1',
-            text: 'Right to work',
-            checked: true
-          },
-          {
-            value: '2',
-            text: 'Right to rent',
-            checked: true
-          },
-          {
-            value: '3',
-            text: 'Disclosure and Barring Service'
-          }
-        ]
-      }) }}
-
-      {{ govukCheckboxes({
-        idPrefix: 'status',
-        name: 'status',
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-          legend: {
-            text: 'Status',
-            classes: 'govuk-fieldset__legend--m'
-          }
-        },
-        items: [
-          {
-            value: 'in-progress',
-            text: 'In progresss',
-            checked: true
-          },
-          {
-            value: 'submitted',
-            text: 'Submitted'
-          },
-          {
-            value: 'in-review',
-            text: 'In review',
-            checked: false
-          },
-          {
-            value: 'approved',
-            text: 'Approved for Publishing',
-            checked: false
-          }
-        ]
-      }) }}
-    {% endset -%}
-
-    {{ mojFilter({
-      heading: {
-        text: 'Filter'
-      },
-
-      submit: {
-        attributes: {
-            "data-test-id": "submit-button"
+    {{ govukCheckboxes({
+      name: "Scheme certified against",
+      classes: "govuk-checkboxes--small",
+      fieldset: {
+        legend: {
+          text: "Scheme certified against",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
         }
       },
-      optionsHtml: filterOptionsHtml
-    }) }}
-  </div>
-  <!-- END filter -->
-
-  <div class="govuk-grid-column-two-thirds">
-    <!-- prettier-ignore -->
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        {%- from "moj/components/search/macro.njk" import mojSearch -%}
-
-        {{ mojSearch({
-          action: '#',
-          method: 'post',
-          input: {
-            id: 'search',
-            name: 'search'
-          },
-          label: {
-            text: 'Search',
-            classes: 'govuk-!-font-weight-bold'
-          },
-          hint: {
-            text: 'Enter the IDSP company or unique reference code'
-          },
-          button: {
-            text: 'Search'
-          }
-        }) }}
-      </div>
-    </div>
-    <div class="govuk-!-padding-bottom-4"></div>
-    <h3 class="govuk-heading-m">Your cases</h3>
-    <p>You have completed <strong>0</strong> of <strong>5</strong> sections.</p>
-    <div class="govuk-!-padding-bottom-4"></div>
-
-    <!-- prettier-ignore -->
-    {%- from "govuk/components/table/macro.njk" import govukTable -%}
-
-    {{ govukTable({
-      attributes: {
-        'data-module': 'moj-sortable-table'
-      },
-      head: [
+      items: [
         {
-          text: "IDSP",
-          attributes: {
-            "aria-sort": "ascending"
-          }
+          value: "r2w",
+          text: "Right to Work"
         },
         {
-          text: "Reference #",
-          attributes: {
-            "aria-sort": "none"
-          }
+          value: "t2r",
+          text: "Right to Rent"
         },
         {
-          text: "Scheme certified against",
-          attributes: {
-            "aria-sort": "none"
-          }
-        },
-        {
-          text: "Status",
-          attributes: {
-            "aria-sort": "none"
-          },
-          format: "numeric"
-        },
-        {
-          text: "Time of last activity",
-          attributes: {
-            "aria-sort": "none"
-          },
-          format: "numeric"
-        },
-        {
-          text: "Details",
-          attributes: {
-            "aria-sort": "none"
-          },
-          format: "numeric"
+          value: "dbs",
+          text: "Disclosure and Barring Service"
         }
-      ],
-      rows: [
-        [
-          {
-            text: "Aconcagua"
-          },
-          {
-            text: "6,961 meters",
-            attributes: {
-              "data-sort-value": "6961"
-            }
-          },
-          {
-            text: "South America"
-          },
-          {
-            text: "1897",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1897"
-            }
-          }
-        ],
-        [
-          {
-            text: "Denali"
-          },
-          {
-            text: "6,194 meters",
-            attributes: {
-              "data-sort-value": "6194"
-            }
-          },
-          {
-            text: "North America"
-          },
-          {
-            text: "1913",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1913"
-            }
-          }
-        ],
-        [
-          {
-            text: "Elbrus"
-          },
-          {
-            text: "5,642 meters",
-            attributes: {
-              "data-sort-value": "5642"
-            }
-          },
-          {
-            text: "Europe"
-          },
-          {
-            text: "1874",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1874"
-            }
-          }
-        ],
-        [
-          {
-            text: "Everest"
-          },
-          {
-            text: "8,850 meters",
-            attributes: {
-              "data-sort-value": "8850"
-            }
-          },
-          {
-            text: "Asia"
-          },
-          {
-            text: "1953",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1953"
-            }
-          }
-        ],
-        [
-          {
-            text: "Kilimanjaro"
-          },
-          {
-            text: "5,895 meters",
-            attributes: {
-              "data-sort-value": "5895"
-            }
-          },
-          {
-            text: "Africa"
-          },
-          {
-            text: "1889",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1889"
-            }
-          }
-        ],
-        [
-          {
-            text: "Puncak Jaya"
-          },
-          {
-            text: "4,884 meters",
-            attributes: {
-              "data-sort-value": "4884"
-            }
-          },
-          {
-            text: "Australia"
-          },
-          {
-            text: "1962",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1962"
-            }
-          }
-        ],
-        [
-          {
-            text: "Vinson"
-          },
-          {
-            text: "4,897 meters",
-            attributes: {
-              "data-sort-value": "4897"
-            }
-          },
-          {
-            text: "Antarctica"
-          },
-          {
-            text: "1966",
-            format: "numeric",
-            attributes: {
-              "data-sort-value": "1966"
-            }
-          }
-        ]
       ]
     }) }}
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <!-- prettier-ignore -->
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    {{ govukCheckboxes({
+      name: "Legend",
+      classes: "govuk-checkboxes--small",
+      fieldset: {
+        legend: {
+          text: "Legend",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "in-progress",
+          text: "In Progress"
+        },
+        {
+          value: "submitted",
+          text: "Submitted"
+        },
+        {
+          value: "in-review",
+          text: "In Review"
+        },
+        {
+          value: "approved-for-pub",
+          text: "Approved for Publishing"
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-row search-container">
+      <div class="govuk-grid-column-two-third">
+        <br />
+        <h1 class="govuk-heading-m">Search</h1>
+        <label class="govuk-label" for="width-20">
+          Search for IDSP or reference number
+        </label>
+        <div class="govuk-input__wrapper">
+          <input
+            class="govuk-input govuk-input--width-20"
+            id="width-20"
+            name="width20"
+            type="text"
+          />
+          <div class="govuk-input__suffix" aria-hidden="true">
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Icon: Search">
+                <path
+                  id="Vector"
+                  d="M8.90102 14.4685C12.385 14.4685 15.2093 11.6442 15.2093 8.1603C15.2093 4.67635 12.385 1.85205 8.90102 1.85205C5.41707 1.85205 2.59277 4.67635 2.59277 8.1603C2.59277 11.6442 5.41707 14.4685 8.90102 14.4685Z"
+                  stroke="white"
+                  stroke-width="2.22222"
+                />
+                <path
+                  id="Vector_2"
+                  d="M13.2344 12.8584L19.5904 19.2144"
+                  stroke="white"
+                  stroke-width="2.22222"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <br />
+        <a href="#">Clear search</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-full">
+    <br />
+    <br />
+    <table class="govuk-table" data-module="moj-sortable-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">
+            IDSP
+          </th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            Reference #
+          </th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            Cert. body
+          </th>
+
+          <th
+            scope="col"
+            class="govuk-table__header govuk-table__header--numeric"
+            aria-sort="none"
+          >
+            Schemes
+          </th>
+
+          <th
+            scope="col"
+            class="govuk-table__header govuk-table__header--numeric"
+            aria-sort="none"
+          >
+            Time submitted
+          </th>
+
+          <th
+            scope="col"
+            class="govuk-table__header govuk-table__header--numeric"
+            aria-sort="none"
+          >
+            Status
+          </th>
+
+          <th
+            scope="col"
+            class="govuk-table__header govuk-table__header--numeric"
+            aria-sort="none"
+          >
+            Details
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">SecureID Platform</td>
+
+          <td class="govuk-table__cell">HDJ2123F</td>
+
+          <td class="govuk-table__cell">DEF</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag--grey">RTW</strong><br />
+            <strong class="govuk-tag--grey">RTR</strong> <br />
+            <strong class="govuk-tag--grey">DBS</strong>
+          </td>
+
+          <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green"> APPROVED </strong>
+          </td>
+
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">IdentifiedID</td>
+
+          <td class="govuk-table__cell">HDJ2123F</td>
+
+          <td class="govuk-table__cell">DEF</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag--grey">RTW</strong><br />
+            <strong class="govuk-tag--grey">RTR</strong> <br />
+            <strong class="govuk-tag--grey">DBS</strong>
+          </td>
+
+          <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red"> REVIEW FAILED </strong>
+          </td>
+
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Global IDSP</td>
+
+          <td class="govuk-table__cell">HDJ2123F</td>
+
+          <td class="govuk-table__cell">DEF</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag--grey">RTW</strong><br />
+            <strong class="govuk-tag--grey">RTR</strong> <br />
+          </td>
+
+          <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--blue"> RECEIVED </strong>
+          </td>
+
+          <td class="govuk-table__cell">
+            <a href="intial-checks.html">View</a>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Bubble Review</td>
+
+          <td class="govuk-table__cell">HDJ2123F</td>
+
+          <td class="govuk-table__cell">DEF</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag--grey">RTW</strong><br />
+            <strong class="govuk-tag--grey">RTR</strong> <br />
+            <strong class="govuk-tag--grey">DBS</strong>
+          </td>
+
+          <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow"> IN REVIEW </strong>
+          </td>
+
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Orange Identity</td>
+
+          <td class="govuk-table__cell">HDJ2123F</td>
+
+          <td class="govuk-table__cell">DEF</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag--grey">RTW</strong><br />
+            <strong class="govuk-tag--grey">RTR</strong> <br />
+            <strong class="govuk-tag--grey">DBS</strong>
+          </td>
+
+          <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
+
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag"> PUBLISHED </strong>
+          </td>
+
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 {% endblock %}

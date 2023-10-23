@@ -2,21 +2,13 @@
 {% extends "layouts/prototype-cb.html" %}
 
 {% block beforeContent %} 
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }} {% endblock %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist-partial-completion"
+}) }}  
+{% endblock %} 
 
 {% block content %}
 
@@ -75,7 +67,8 @@
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
-      text: "Save and continue"
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/application-summary.html"
     }) }}
   </div>
 </div>

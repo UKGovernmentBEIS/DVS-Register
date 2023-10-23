@@ -1,22 +1,15 @@
 <!-- prettier-ignore -->
-{% extends "layouts/prototype-cb.html" %}
+{% extends "layouts/prototype.html" %}
 
 {% block beforeContent %} 
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }} {% endblock %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
 
 {% block content %}
 
@@ -67,7 +60,8 @@
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
-      text: "Save and continue"
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/read-declaration"
     }) }}
   </div>
 </div>

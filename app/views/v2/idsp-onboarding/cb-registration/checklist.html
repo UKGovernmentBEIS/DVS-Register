@@ -2,21 +2,14 @@
 {% extends "layouts/prototype-cb.html" %}
 
 {% block beforeContent %} 
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }} {% endblock %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "case-list"
+}) }}  
+{% endblock %} 
+
 
 {% block content %}
 
@@ -55,12 +48,12 @@
           },
           items: [{
             text: 'Check eligibility',
-            href: '#',
-            tag: "cannot start"
+            href: '/v2/idsp-onboarding/cb-registration/check-eligibility.html',
+            tag: "not started"
           }, {
             text: 'Read declaration',
-            href: '#',
-            tag: "complete"
+            href: '/v2/idsp-onboarding/cb-registration/read-declaration.html',
+            tag: "not started"
           }]
         },
         {
@@ -69,11 +62,11 @@
           },
           items: [{
             text: 'Provide IDSP company information',
-            href: '#',
-            tag: "in progress"
+            href: '/v2/idsp-onboarding/cb-registration/provide-idsp-company-information-1',
+            tag: "not started"
           }, {
             text: 'Provide IDSP company documents',
-            href: '#',
+            href: '/v2/idsp-onboarding/cb-registration/provide-idsp-company-documents',
             tag: "not started"
           }]
         },
@@ -83,7 +76,8 @@
           },
           items: [{
             text: 'Review and submit',
-            href: '#'
+            href: '#',
+            tag: "cannot start"
           }]
         }
       ]

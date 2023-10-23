@@ -7,16 +7,16 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts #} {% extends
   
   {% block header %} 
   {{ govukHeader({
-    homepageUrl: "/",
+    homepageUrl: "/v2/idsp-onboarding/cb-registration",
     serviceName: "Register an IDSP",
     serviceUrl: "/v2/idsp-onboarding/cb-registration",
     navigation: [
       {
-        href: "case-list",
+        href: "/v2/idsp-onboarding/cb-registration/case-list-updated",
         text: "Case List"
       },
       {
-        href: "create-application",
+        href: "/v2/idsp-onboarding/cb-registration/create-application",
         text: "Create Application"
       },
       {

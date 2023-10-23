@@ -1,23 +1,6 @@
 <!-- prettier-ignore -->
 {% extends "layouts/prototype-cb.html" %}
 
-{% block beforeContent %} 
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }} {% endblock %} 
-
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -64,7 +47,8 @@
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
-      text: "Save and continue"
+      text: "Create an application",
+      href: "/v2/idsp-onboarding/cb-registration/checklist"
     }) }}
   </div>
 </div>

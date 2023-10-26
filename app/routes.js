@@ -34,3 +34,4 @@ router.get('/company1', function(req, res){
 router.get('/'+version+'/idsp-onboarding/ofdia-dashboard', function(req, res){
     res.redirect('/'+version+'/idsp-onboarding/ofdia-dashboard/start');
 });
+

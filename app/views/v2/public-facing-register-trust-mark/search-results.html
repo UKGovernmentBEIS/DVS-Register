@@ -55,7 +55,6 @@ provider - GOV.UK {% endblock %} {% block beforeContent %}
             class="govuk-button"
             data-module="govuk-button"
             data-test-id="submit-button"
-            onclick="window.location.href = '/v1/public-facing-register/search-filtered-rtw';"
           >
             Search
           </button>
@@ -157,8 +156,7 @@ provider - GOV.UK {% endblock %} {% block beforeContent %}
 
       submit: {
         attributes: {
-            "data-test-id": "submit-button",
-            onclick: "window.location.href = '/v1/public-facing-register/search-filtered-rtw';"
+            "data-test-id": "submit-button"
         }
       },
       optionsHtml: filterOptionsHtml

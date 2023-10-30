@@ -1,0 +1,236 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist-partial-completion"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Application summary</span>
+      Strawberry Jam
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  <!-- prettier-ignore -->
+
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "IDSP Company Information"
+        }
+      },
+      rows: [
+        {
+          key: {
+            text: "Unique Reference Number"
+          },
+          value: {
+            html: "HDJ2123F"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Unique Reference Number"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "IDSP Company Name"
+          },
+          value: {
+            html: "Strawberry Jam"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "IDSP Company Name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Address"
+          },
+          value: {
+            html: "234 Eckford Street
+                  London
+                  N1 9ST
+                  United Kingdom"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Unique Reference Number"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Email Address"
+          },
+          value: {
+            html: "info@strawberryjam.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Email Address"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "UK Telephone Company Number"
+          },
+          value: {
+            html: "+44 222 333444"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "UK Telephone Company Number"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Schemes Certified Against"
+          },
+          value: {
+            html: "<ul class='govuk-list'>
+                  <li>Right to Work</li>
+                  <li>Right to Rent</li>
+                  <li>Disclosure and Barring Service</li>
+                  </ul>
+                  "
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Schemes Certified Against"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "URL Link to Certification Document"
+          },
+          value: {
+            html: "https://strawberryjam.defcertification.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "URL Link to Certification Document"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Link or file name"
+          },
+          value: {
+            html: "Aug 2023 - Strawberry Jam Certification Document"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "Link or file name"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+    <!-- prettier-ignore -->
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "IDSP Company Information"
+        }
+      },
+      rows: [
+        {
+          key: {
+            text: "URL Link to Company Documents"
+          },
+          value: {
+            html: "https://strawberryjamdocuments.defcertification.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "URL Link to Company Documents"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukCheckboxes({
+      classes: "govuk-checkboxes--small",
+      items: [
+        {
+          value: "hmrc",
+          text: "By submitting this form, I confirm that to the best of my knowledge and belief, the information I have given is correct."
+        }
+      ]
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Confirm and submit",
+      href: "/v2/idsp-onboarding/cb-registration/confirmation.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

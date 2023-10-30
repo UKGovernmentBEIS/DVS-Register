@@ -1,0 +1,43 @@
+{% extends "layouts/prototype-cb.html" %}
+
+<!-- prettier-ignore -->
+{% block pageTitle %}
+Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukPanel({
+    titleText: "Application submitted",
+    html: "Your reference number<br /><strong>HDJ2123F</strong>" }) }}
+
+    <p>
+      Your application has been submitted to the Office of Digital Identities
+      and Attributes (OfDIA).
+    </p>
+    <p>
+      We have sent you a confirmation email to
+      <strong>[supplied email]</strong>.
+    </p>
+    <p><a href="#">You can print or save this page as a PDF</a>.</p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p>
+      We aim to contact you within 1 week to tell you if we have approved your
+      application.
+    </p>
+
+    <p>
+      You may be contacted for further information regarding your application.
+    </p>
+    <p>
+      <a href="#"> What did you think of this service? </a> (takes 30 seconds)
+    </p>
+  </div>
+</div>
+
+{% endblock %}

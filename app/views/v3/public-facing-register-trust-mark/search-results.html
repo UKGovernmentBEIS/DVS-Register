@@ -1,0 +1,224 @@
+{% extends "layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find an identity
+provider - GOV.UK {% endblock %} {% block beforeContent %}
+<!-- prettier-ignore -->
+{{ govukBreadcrumbs({ 
+  items: [ { text:"Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider", href: "#" }] })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your Search Results</h1>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-3"></div>
+<!-- END title -->
+
+<div class="govuk-grid-row">
+  <!-- START filter -->
+
+  <!-- @TODO: there is not option to re-order the submit button hence
+              adding plain HTML here -->
+  <div class="govuk-grid-column-one-third">
+    <div class="moj-filter govuk-!-margin-bottom-3">
+      <div class="moj-filter__header">
+        <div class="moj-filter__header-title">
+          <h2 class="govuk-heading-m">Search</h2>
+        </div>
+
+        <div class="moj-filter__header-action"></div>
+      </div>
+
+      <div class="moj-filter__content">
+        <div class="moj-filter__options">
+          <div class="govuk-form-group govuk-!-margin-bottom-3">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="company-name">
+                Search
+              </label>
+            </h1>
+
+            <input
+              class="govuk-input"
+              id="company-name"
+              name="companyName"
+              type="text"
+              value="EAB889922"
+            />
+          </div>
+          <button
+            class="govuk-button"
+            data-module="govuk-button"
+            data-test-id="submit-button"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- prettier-ignore -->
+    {%- from "moj/components/filter/macro.njk" import mojFilter -%}
+    {%- from "govuk/components/checkboxes/macro.njk" import govukCheckboxes -%}
+    {%- from "govuk/components/input/macro.njk" import govukInput -%}
+
+    {%- set filterOptionsHtml %}
+
+      {{ govukCheckboxes({
+        idPrefix: 'type',
+        name: 'type',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Scheme provided',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: '1',
+            text: 'Right to work'
+          },
+          {
+            value: '2',
+            text: 'Right to rent'
+          },
+          {
+            value: '3',
+            text: 'Disclosure and Barring Service'
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: 'status',
+        name: 'status',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Role type',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: 'identity',
+            text: 'Identity'
+          },
+          {
+            value: 'attribute',
+            text: 'Attribute'
+          },
+          {
+            value: 'orchestration',
+            text: 'Orchestration'
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: 'attribute',
+        name: 'attribute',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Attribute level',
+            classes: 'govuk-fieldset__legend--m'
+          }
+        },
+        items: [
+          {
+            value: 'l1a',
+            text: 'L1A'
+          },
+          {
+            value: 'l1b',
+            text: 'L1B'
+          },
+          {
+            value: 'l1c',
+            text: 'L1C'
+          }
+        ]
+      }) }}
+    {% endset -%}
+
+
+    {{ mojFilter({
+      heading: {
+        text: 'Filter'
+      },
+
+      submit: {
+        attributes: {
+            "data-test-id": "submit-button"
+        }
+      },
+      optionsHtml: filterOptionsHtml
+    }) }}
+  </div>
+  <!-- END filter -->
+
+  <div class="govuk-grid-column-two-thirds">
+    <!-- START cards -->
+    <div class="govuk-heading-s">1 provider(s) found</div>
+    <p>Containing: <span style="border: 1px solid #0B0C0C; padding: 2px;">EAB889922 <b>x</b></p>
+    <div class="search-sort">
+      <fieldset>
+        <legend>Sort view</legend>
+        <label aria-pressed="" aria-describe="Results sorted by Random"
+          >None</label
+        >
+        <a
+          href="/?sort=lastupd"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="descending"
+          aria-describe="Sort results by Last updated"
+          >Last updated</a
+        >
+        <a
+          href="/?sort=a2z"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="ascending"
+          aria-describe="Sort results by A to Z"
+          >A to Z</a
+        >
+        <a
+          href="/?sort=z2a"
+          class="govuk-link govuk-link--no-visited-state"
+          aria-sort="descending"
+          aria-describe="Sort results by Z to A"
+          >Z to A</a
+        >
+      </fieldset>
+    </div>
+
+    {# @TODO: find a nunjucks alternative to the HTML below #}
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3"
+    />
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="vacancy-02" href="company1.html"> SecureID Platform</a>
+    </h2>
+    <p class="govuk-body" style="color: #505a5f">UK Digital Trust Mark number: EAB889922</p>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Schemes certified against</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to Work, Right to Rent, Disclosure and Barring Service
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+    />
+  </div>
+
+  {% endblock %}
+</div>

@@ -1,0 +1,107 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Create an account</span>
+      Enter your company details
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "Role",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "role",
+      classes: "govuk-input--width-20",
+      name: "role"
+    }) }}
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "UK Telephone Company Number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "uk-tel-company-no",
+      disabled: true,
+      name: "ukCompanyNumber",
+      value: "+442233 565656"
+    }) }}
+    {{ govukDetails({
+      summaryText: "Not your preferred company number?",
+      text: "We need to know your nationality so we can work out which elections you're entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 1",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      disabled: true,
+      id: "address-line-1",
+      name: "addressLine1",
+      value: "4 D’Arblay St"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 2 (optional)",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      disabled: true,
+      id: "address-line-2",
+      name: "addressLine2"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Town or city",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      disabled: true,
+      id: "town-city",
+      name: "townCity",
+      value: "London"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Postcode",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      disabled: true,
+      classes: "govuk-!-width-one-quarter",
+      id: "postcode",
+      name: "postcode",
+      value: "W1F 8DJ"
+    }) }}
+     {{ govukDetails({
+      summaryText: "Not your preferred address?",
+      text: "We need to know your nationality so we can work out which elections you're entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+    }) }}
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Register",
+      href: "/v2/idsp-onboarding/cb-registration/case-list.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

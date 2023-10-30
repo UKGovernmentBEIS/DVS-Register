@@ -1,0 +1,76 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist-partial-completion"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Register an IDSP</span>
+      Strawberry Jam
+      <span class="govuk-caption-l govuk-!-margin-top-1"
+        >Reference Number: HDJ2123F</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Please provide IDSP company documents that showcase information or serve
+      as proof for the following capacities:
+    </p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+      <li>Companies House</li>
+      <li>Legal Status</li>
+      <li>Directorships</li>
+      <li>Foreign Funding</li>
+      <li>Financial Probity</li>
+      <li>T/A address</li>
+      <li>Operations Address</li>
+      <li>Sanctions List</li>
+      <li>OFSI</li>
+      <li>UNFC (where applicable)</li>
+      <li>EC (where applicable)</li>
+      <li>TARIC (where applicable)</li>
+      <li>Existing accreditations</li>
+      <li>CAB webpage</li>
+    </ul>
+    <!-- prettier-ignore -->
+
+    {{ govukInput({
+      label: {
+        text: "URL Link to Company Documents",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Please provide a link to the document that contains documents related to the information above. This link should be accessible when checks are in progress."
+      },
+      id: "url-company-docs",
+      name: "urlToCompanyDocs"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/application-summary.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

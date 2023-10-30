@@ -1,0 +1,106 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Register an IDSP</span>
+      Strawberry Jam
+      <span class="govuk-caption-l govuk-!-margin-top-1"
+        >Reference Number: HDJ2123F</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Please enter basic information about the IDSP. These information will
+      appear in the public-facing register.
+    </p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+    <!-- prettier-ignore -->
+
+    {{ govukInput({
+      label: {
+        text: "IDSP Trading Name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "trading-name",
+      name: "tradingName"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "IDSP Company Name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "company-name",
+      name: "companyName"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Address line 1",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "address-line-1",
+      name: "addressLine1"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 2 (optional)",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "address-line-2",
+      name: "addressLine2"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Town or City",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "town-city",
+      name: "townCity"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Postcode",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-!-width-one-quarter",
+      id: "postcode",
+      name: "postcode"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/provide-idsp-company-information-2"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

@@ -15,7 +15,7 @@ router.get('/start', function(req, res){
 });
 
 router.get('/', function(req, res){
-    res.redirect('/'+version+'/public-facing-register/start');
+    res.redirect('/index');
 });
 router.get('/'+version, function(req, res){
     res.redirect('/'+version+'/public-facing-register/start');

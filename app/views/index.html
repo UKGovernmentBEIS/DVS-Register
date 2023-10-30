@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} GOV.UK Prototype Kit {%
+endblock %} {% block content %}
+<!-- Main content starts -->
+
+<!-- Full width heading starts -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">DVS Register</h1>
+  </div>
+</div>
+<!-- Full width heading ends -->
+
+<div class="govuk-grid-row">
+  <!-- Sprints section starts -->
+  <div class="govuk-grid-column-two-thirds">
+    {% include './v2/_summary.html' %}
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">
+      Previous sprints archive
+    </h2>
+
+    {% set v1Html %} {% include './v1/_summary.html' %} {% endset %}
+
+    <!-- prettier-ignore -->
+    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+    <!-- prettier-ignore -->
+    {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+          {
+            heading: {
+                text: "Sprint 1"
+            },
+            content: {
+                html: v1Html
+            }
+          }
+      ]
+    }) }}
+  </div>
+  <!-- Sprints section ends -->
+
+  <!-- One third column starts -->
+  <div class="govuk-grid-column-one-third"></div>
+  <!-- One third column ends -->
+</div>
+
+<!-- Main content ends -->
+{% endblock %}

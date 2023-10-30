@@ -1,0 +1,781 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} OfDIA Review Platform {% endblock %} {% block header %}
+
+<div class="ofdia-view-wrapper">
+    <div class="govuk-grid-row">
+        <header class="govuk-header" role="banner" data-module="govuk-header">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="left clear">
+                    <h2 class="govuk-heading-m-white header-heading">OfDIA Review Platform</h2>
+                </div>
+                <div class="right"><strong class="govuk-tag ">
+                        Administrator View
+                    </strong>
+                    |
+                    <a class="govuk-header__link" href="#">
+                        <strong>
+                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="Icon: Chevron" clip-path="url(#clip0_37814_2232)">
+                                    <path id="Icon: Chevron_2" d="M14 1.5L7.5 8L1 1.5" stroke="white"
+                                        stroke-width="2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_37814_2232">
+                                        <rect width="15" height="10" fill="white"
+                                            transform="translate(15 10) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            Menu</strong>
+                    </a>
+                    |
+                    <a class="govuk-header__link" href="#">
+                        <strong>Sign Out</strong>
+                    </a>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="#">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="#">Dashboard</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="#">HDJ21123F Case Review</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <br />
+
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-summary-card">
+                    <div class="govuk-summary-card__title-wrapper">
+                        <h2 class="govuk-summary-card__title">Media browser</h2>
+                        <br />
+                        <a href="#">Add a new file or URL Link</a>
+                    </div>
+                    <div class="govuk-summary-card__content">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <span class="govuk-body">File</span>
+                                <p class="govuk-heading-s">HDJ2123F.pdf</p>
+                                11-Jul-'23 03:16 PM by OfDodo
+                                <a href="show-application" class="govuk-link govuk-!-text-align-right"
+                                    target="_blank">View<br></a>
+                                <br />
+                            </div>
+
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <span class="govuk-body">URL</span>
+                                <p class="govuk-heading-s">Aug 2023 - Strawberry Jam Certification Document</p>
+                                11-Jul-'23 03:16 PM by OfDodo
+                                <a href="#" class="govuk-link govuk-!-text-align-right">https://test.xyz<br></a>
+                                <br />
+                            </div>
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <span class="govuk-body">File</span>
+                                <p class="govuk-heading-s">Strawberry Jam Documents.pdf</p>
+                                11-Jul-'23 03:16 PM by OfDodo
+                                <a href="#" class="govuk-link govuk-!-text-align-right">View<br></a>
+                                <br />
+                            </div>
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <span class="govuk-body">URL</span>
+                                <p class="govuk-heading-s">Strawberry Jam Documents</p>
+                                11-Jul-'23 03:16 PM by OfDodo
+                                <a href="#"
+                                    class="govuk-link govuk-!-text-align-right">https://strawberryjamdocuments<br />.defcertification.com<br></a>
+                                <br />
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="govuk-summary-card">
+                    <div class="govuk-summary-card__title-wrapper">
+                        <h2 class="govuk-summary-card__title">Case History</h2>
+                    </div>
+                    <div class="govuk-summary-card__content">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <p class="govuk-heading-s">Inital Checks Completed</p>
+                                11-Jul-'23 03:16 PM by OfDodo
+                                <br />
+
+
+                                <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                                <br />
+                            </div>
+
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <p class="govuk-heading-s">New Information Received</p>
+                                27-Jan-'22 10:46 PM by Ada
+                                <br />
+
+
+                                <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                                <br />
+                            </div>
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <p class="govuk-heading-s">Initial Checks initiated</p>
+                                07-Mar-'22 07:03 AM by Dan
+
+                                <br />
+
+
+                                <a href="#" class="govuk-link govuk-!-text-align-right">View Details<br></a>
+                                <br />
+                            </div>
+                            <div class="govuk-summary-list__row recent-activity-item">
+                                <p class="govuk-heading-s">Case Application Received</p>
+                                27-Jan-'22 10:46 PM by Ada
+                                <br />
+
+
+                                <a href="#" class="govuk-link govuk-!-text-align-right">View Details</a>
+
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Case Review</h1>
+                <br />
+
+                <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">
+                        Contents
+                    </h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                            <a class="govuk-tabs__tab" href="#past-day">
+                                Initial Checks
+                            </a>
+
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#secondary-checks">
+                                Secondary Checks
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#publishing-review">
+                                Publishing Review
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="govuk-tabs__panel" id="past-day">
+
+
+                        <div class="tab-header">
+                            <h2 class="govuk-heading-l">Initial Checks</h2>
+                            <div>
+                                <strong class="govuk-tag govuk-tag--green">
+                                    PASSED REVIEW
+                                </strong>
+                            </div>
+                        </div>
+
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Name and address of Certification body
+                                <strong class="govuk-tag govuk-tag--green">
+                                    PASSED REVIEW
+                                </strong>
+
+                                <br /><br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Name of Certifying Body</li>
+                                    <li>Contact Email</li>
+                                    <li>UK Telephone Number</li>
+                                </ol>
+
+
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published" selected>Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                IDSP Company Details
+
+                                <br /><br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>IDSP Trading Name</li>
+                                    <li>Unique Reference Number</li>
+                                    <li>IDSP Company Name</li>
+                                    <li>Companies House Number</li>
+                                    <li>Company Address</li>
+                                    <li>UK Telephone Number</li>
+                                    <li>Email</li>
+                                    <li>Website</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Availability of Certification Documents
+
+
+                                <br /><br />
+                                <p class="govuk-body">Check for availability of the following documents:</p>
+                                <ol class="govuk-body">
+                                    <li>Certificate of Conformity (File and Link)</li>
+                                    <li>Schedule of Certificate of Conformity (File and Link)</li>
+
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Validity of Certification
+
+                                <br /><br />
+                                <p class="govuk-body">Check for availability of the following documents:</p>
+                                <ol class="govuk-body">
+                                    <li>Date of Certification</li>
+                                    <li>Term of Expiry of Certification</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Any Other information Required
+
+
+                                <br /><br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Any other information identifyed as necessary</li>
+
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending" selected>Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                            Comments
+                        </span>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                            aria-describedby="more-detail-hint"></textarea>
+                        <button class="govuk-button govuk-button--secondary additional-review-btn">Request for
+                            additional documentation</button>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <br />
+                        <div class="section-header">
+                            <h1 class="govuk-heading-l"> All Checks Complete?</h1>
+
+                            <div>
+                                {{ govukButton({ text: "Checks Complete", href: "#secondary-checks", isStartButton:
+                                false
+                                })
+                                }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="secondary-checks">
+                        <div class="tab-header">
+                            <h2 class="govuk-heading-l">Secondary Checks</h2>
+                            <div>
+                                <strong class="govuk-tag govuk-tag--yellow">
+                                    REVIEW IN PROGRESS
+                                </strong>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Initial Check comments
+
+                                <div class="initial-comments">
+                                    <span class="govuk-body">from Jamie McGinley:</span>
+                                    <br /><br />
+                                    <p class="govuk-body">Company Address not updated in Companies House website</p>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Certifying Body Information
+                                <strong class="govuk-tag govuk-tag--green">
+                                    PASSED REVIEW
+                                </strong>
+
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Name of Certifying Body</li>
+                                    <li>Contact Email</li>
+                                    <li>UK Telephone Number</li>
+                                    <li>Website</li>
+                                </ol>
+
+
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published" selected>Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Legal Status
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Legal Status</li>
+                                </ol>
+
+
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published" selected>Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Directorship
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Directorship</li>
+                                </ol>
+
+
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published" selected>Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Foreign Funding
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Foreign Funding documents</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Financial Probity
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Financial Probity</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Operations Address
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Operations Address</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                OFSI
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>OFSI</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                UNFC (where applicable)
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>UNFC</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                EC (where applicable)
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>EC</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                TARIC (where applicable)
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>TARIC</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Existing accreditations
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Existing accreditations</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <div>
+                            <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                                Any Other Information Required
+                                <br />
+                                <p class="govuk-body">Check for:</p>
+                                <ol class="govuk-body">
+                                    <li>Any other information identified as necessary</li>
+                                </ol>
+                                <div class="govuk-form-group check-body">
+                                    <select class="govuk-select" id="sort" name="sort">
+                                        <option value="pending">Pending</option>
+                                        <option value="published">Passed Review</option>
+                                        <option value="updated">Failed Review</option>
+                                    </select>
+                                    <button class="govuk-button">Submit</button>
+                                </div>
+                            </span>
+                        </div>
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                            Comments
+                        </span>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                            aria-describedby="more-detail-hint"></textarea>
+                        <button class="govuk-button govuk-button--secondary additional-review-btn">Request for
+                            additional documentation</button>
+
+                        <hr class="govuk-section-break govuk-section-break--visible">
+                        <br />
+
+                        <div class="section-header">
+                            <h1 class="govuk-heading-l"> All Checks Complete?</h1>
+
+                            <div>
+                                {{ govukButton({ text: "Checks Complete", href: "#secondary-checks", isStartButton:
+                                false,
+                                disabled: true
+                                })
+                                }}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="publishing-review">
+
+
+                        <div class="tab-header">
+                            <h2 class="govuk-heading-l">Publishing Review</h2>
+                            <div>
+                                <strong class="govuk-tag govuk-tag--yellow">
+                                    REVIEW IN PROGRESS
+                                </strong>
+                            </div>
+                        </div>
+
+                        <span class="govuk-accordion__section-button check-bottom" id="accordion-default-heading-1">
+                            Certifying Body Information
+                            <strong class="govuk-tag govuk-tag--green">
+                                PASSED REVIEW
+                            </strong>
+                        </span>
+                        <dl class="govuk-summary-list publish-review">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    IDSP Trading Name
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    SecureID
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    IDSP Company Name
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    Fields Forever Ltd
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Companies House Number
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    010101010
+                                </dd>
+                            </div>
+
+                            <div class="govuk-summary-list__row">
+
+
+                                <dt class="govuk-summary-list__key">
+                                    Identity Profiles
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    L1A, L1B, L1C, L2A, L2B, L2C
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Email
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    info@secureidplatform.com
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Telephone
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    +44 (0) 2045511332
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Website
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+
+                                    <p class="govuk-body">www.secureidplatform.com</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+
+                                    <p class="govuk-body">Fora, 180 Borough High Street, London, SE31 1LB,
+                                        United Kingdom</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Schemes certified against
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+
+                                    <p class="govuk-body">Right to Work, Right to Rent, Disclosure and
+                                        Barring Service</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Date of certification
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">3 October 2022</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Proof of certification
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <a href="#">Certification document</a>
+                                </dd>
+                            </div>
+                        </dl>
+
+
+                        <div class="section-header">
+                            <h1 class="govuk-heading-l"> Ready to Publish?</h1>
+
+                            <div>
+                                {{ govukButton({ text: "Publish to the register", isStartButton: false
+                                })
+                                }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

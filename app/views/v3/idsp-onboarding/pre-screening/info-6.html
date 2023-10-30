@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+Register as a digital service provider
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader({
+homepageUrl: "#",
+serviceName: "Register as a digital service provider",
+serviceUrl: "#",
+navigation: [
+{
+href: "#",
+text: "Search",
+active: true
+},
+{
+href: "#",
+text: "About"
+},
+{
+href: "#",
+text: "Help"
+}
+]
+}) }}
+
+
+<div class="govuk-width-container">
+    {{ govukBreadcrumbs({
+    items: [
+    {
+    text: "Home",
+    href: "#"
+    }
+    ]
+    }) }}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+
+            <h1 class="govuk-heading-xl">
+                Submit information for an initial assessment
+            </h1>
+            <br />
+            <br />
+            <label class="govuk-label govuk-label--m" for="more-detail">
+                Is there any other information that you would like to provide to assist your application?
+            </label>
+            <ul class="govuk-body">
+                <li>
+                    You currently are in the pre-screening stage of applying for certification against the trust framework.
+                </li>
+                <li>
+                    You understand what you are applying for
+                </li>
+                <li>
+                    The Terms and Conditions associated with being part of the register
+                </li>
+                <li>
+                    The legal requirements
+                </li>
+                <li>
+                    You understand that you will need to be able to prove when asked that you are compliant with standards and the UK jurisdiction.
+                </li>
+                <li>
+                    You understand that this check is currently free and that a fee may be associated with this in the future.
+                </li>
+            </ul>
+
+            <br />
+            <br />
+            {{ govukButton({
+                text: "Confirm and Submit",
+                href: "confirm-and-submit.html",
+                isStartButton: false
+                }) }}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find an
+identity provider - GOV.UK {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Service</span>
+      Verify a UK Digital Trust-Mark
+    </h1>
+
+    <p>
+      Use this service to verify if a provider that has received a UK Digital
+      Trust-Mark
+    </p>
+    <p>Use this service when you need to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Verify if a provider is trust-marked</li>
+      <li>
+        Review schemes a provider is certified against the UK Digital Trust
+        framework
+      </li>
+      <li>View provider histories and certificate expiration dates</li>
+    </ul>
+
+    {{ govukButton({ text: "Start now", href:
+    "/v2/public-facing-register-trust-mark/search.html", isStartButton: true })
+    }}
+
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
+      <a href="#">What does the Trust Framework mean</a>
+    </aside>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items govuk-!-margin-bottom-8"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Part of</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#"> Digital identity and attributes </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Related content</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#"> What is the UK Digital Trust Mark? </a>
+          </li>
+          <li>
+            <a href="#">
+              What you get from adopting trust-marked digital identities and
+              attributes
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}

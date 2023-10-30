@@ -1,0 +1,183 @@
+{% extends "layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find an
+identity provider - GOV.UK {% endblock %} {% block beforeContent %}
+<!-- prettier-ignore -->
+{{ govukBreadcrumbs({
+items: [ { text: "Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider",
+href: "search" }, { text: "SecureID Platform"}] }) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-l"
+        >Certified Provider<span class="govuk-visually-hidden">:</span></span
+      >
+      SecureID Platform
+      <p class="govuk-heading-s">Trustmark Number: EA889932</p>
+    </h1>
+  </div>
+</div>
+<!-- END title -->
+
+<!-- prettier-ignore -->
+<div class="govuk-grid-row">`
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-2">
+      <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Schemes certified against:</p>
+      {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+      {{ govukTag({
+        text: "Right to work"
+      }) }}
+      {{ govukTag({
+        text: "Right to rent"
+      }) }}
+      {{ govukTag({
+        text: "Disclosure and Barring Service"
+      }) }}
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Published: 20 June 2021</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Last updated: 30 August 2022</p>
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-7"></div>
+
+    
+    {% from "govuk/components/tabs/macro.njk" import govukTabs %}
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+    {% set overviewHtml %}
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email"
+          },
+          value: {
+            text: "info@secureidplatform.com"
+          }
+        },
+        {
+          key: {
+            text: "Telephone"
+          },
+          value: {
+            text: "+44 (0) 2045511332"
+          }
+        },
+        {
+          key: {
+            text: "Website"
+          },
+          value: {
+            html: "www.secureidplatform.com"
+          }
+        },
+        {
+          key: {
+            text: "Address"
+          },
+          value: {
+            html: '<p class="govuk-body">Fora, 180 Borough High Street, London, SE31 1LB, United Kingdom</p>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set certificationInformation %}
+     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Schemes certified against"
+          },
+          value: {
+            text: "Right to Work, Right to Rent, Disclosure and Barring Service"
+          }
+        },
+        {
+          key: {
+            text: "Identity profiles certified against"
+          },
+          value: {
+            text: "L1A, L1B, L1C, L2A, L2B, L2C"
+          }
+        },
+        {
+          key: {
+            text: "Date of certification"
+          },
+          value: {
+            text: "3 October 2022"
+          }
+        },
+        {
+          key: {
+            text: "Certification expiration date"
+          },
+          value: {
+            text: "3 October 2025"
+          }
+        },
+        {
+          key: {
+            text: "Proof of certification"
+          },
+          key: {
+            text: "Proof of certification"
+          },
+          value: {
+            html: '<a href="#" class="govuk-link">Certification document</a>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set genericHtml %}
+    
+    {% endset -%}
+
+    {{ govukTabs({
+      items: [
+        {
+          label: "Certification Information",
+          id: "certification-information",
+          panel: {
+            html: certificationInformation
+          }
+        },
+        {
+          label: "Contact",
+          id: "contact",
+          panel: {
+            html: overviewHtml
+          }
+        },
+        {
+          label: "Certification History",
+          id: "certification-history",
+          panel: {
+            html: genericHtml
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third" style="text-align: center;">
+    <img src="/public/images/fakemark-2.png" alt="trust mark for EA889932" class="govuk-!-margin-bottom-4" style="color: #505a5f"/>
+    <p>Trustmark number: <strong>EA889932</strong></p>
+  </div>
+</div>
+
+{% endblock %}

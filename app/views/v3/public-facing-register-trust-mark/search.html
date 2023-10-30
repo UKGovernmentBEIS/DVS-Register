@@ -1,0 +1,71 @@
+{% extends "layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find an
+identity provider - GOV.UK {% endblock %} {% block beforeContent %}
+<!-- prettier-ignore -->
+{{ govukBreadcrumbs({ 
+  items: [ { text:"Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider", href: "#" }] })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Search the UK Digital Trust Register</h1>
+    <p>Find a company by name or trust mark number</p>
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "Enter company name or UK Digital trust mark number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "company-name",
+      name: "companyName"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Search",
+      href: "/v2/public-facing-register-trust-mark/search-results.html"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Advanced filter",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    <!-- prettier-ignore -->
+    {{ govukDetails({
+      summaryText: "What does the trust-mark number look like?",
+      text: "The UK Digital trust mark number should be accompanying the DVS trust mark logo, for example, EA889922 or ACU983EE"
+    }) }}
+
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
+      <a href="#">What does the Trust Framework mean</a>
+    </aside>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-3"></div>
+<!-- END title -->
+
+<script nonce="">
+  (() => {
+    document
+      .querySelector("#company-name")
+      .addEventListener("click", (event) => {
+        event.target.value = "EAB889922";
+      });
+  })();
+</script>
+
+{% endblock %}

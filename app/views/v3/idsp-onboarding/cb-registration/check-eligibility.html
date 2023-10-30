@@ -1,0 +1,69 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Check eligibility</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">You can use this service to:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Create a new application for an IDSP</li>
+      <li>Track your ongoing applications</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">To start a new application, you'll need:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the IDSP Trading Name</li>
+      <li>the IDSP Company Name</li>
+      <li>Company Address</li>
+      <li>Company contact details (UK Telephone number, email address)</li>
+      <li>Schemes certified against</li>
+      <li>URL Link to Certification Document</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">
+      The IDSP Company Documents that you'll need:
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>The IDSP Company Documents that you’ll need:</li>
+      <li>Companies House</li>
+      <li>Legal Status</li>
+      <li>Directorships</li>
+      <li>Foreign Funding</li>
+      <li>Financial Probity</li>
+      <li>T/A address</li>
+      <li>Operations Address</li>
+      <li>Sanctions List</li>
+      <li>OFSI</li>
+      <li>UNFC (where applicable)</li>
+      <li>EC (where applicable)</li>
+      <li>TARIC (where applicable)</li>
+      <li>Existing accreditations</li>
+      <li>CAB webpage</li>
+    </ul>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/read-declaration"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

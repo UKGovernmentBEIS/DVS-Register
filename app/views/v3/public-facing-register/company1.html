@@ -1,0 +1,173 @@
+{% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
+provider - GOV.UK {% endblock %} {% block beforeContent %}
+<!-- prettier-ignore -->
+{{ govukBreadcrumbs({
+items: [ { text: "Home", href: "/v1/public-facing-register/start" }, { text: "Find an identity provider",
+href: "search" }, { text: "SecureID Platform"}] }) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- START title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-l"
+        >Identity provider<span class="govuk-visually-hidden">:</span></span
+      >
+      SecureID Platform
+    </h1>
+  </div>
+</div>
+<!-- END title -->
+
+<!-- prettier-ignore -->
+<div class="govuk-grid-row">`
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-2">
+      <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Schemes certified against:</p>
+      {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+      {{ govukTag({
+        text: "Right to work"
+      }) }}
+      {{ govukTag({
+        text: "Right to rent"
+      }) }}
+      {{ govukTag({
+        text: "Disclosure and Barring Service"
+      }) }}
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Published: 20 June 2021</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Last updated: 30 August 2022</p>
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-7"></div>
+
+    
+    {% from "govuk/components/tabs/macro.njk" import govukTabs %}
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+    {% set overviewHtml %}
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email"
+          },
+          value: {
+            text: "info@secureidplatform.com"
+          }
+        },
+        {
+          key: {
+            text: "Telephone"
+          },
+          value: {
+            text: "+44 (0) 2045511332"
+          }
+        },
+        {
+          key: {
+            text: "Website"
+          },
+          value: {
+            html: "www.secureidplatform.com"
+          }
+        },
+        {
+          key: {
+            text: "Address"
+          },
+          value: {
+            html: '<p class="govuk-body">Fora, 180 Borough High Street, London, SE31 1LB, United Kingdom</p>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set certificationInformation %}
+     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Identity profiles"
+          },
+          value: {
+            text: "L1A, L1B, L1C, L2A, L2B, L2C"
+          }
+        },
+        {
+          key: {
+            text: "Schemes certified against"
+          },
+          value: {
+            text: "Right to Work, Right to Rent, Disclosure and Barring Service"
+          }
+        },
+        {
+          key: {
+            text: "Date of certification"
+          },
+          value: {
+            text: "3 October 2022"
+          }
+        },
+        {
+          key: {
+            text: "Proof of certification"
+          },
+          key: {
+            text: "Proof of certification"
+          },
+          value: {
+            html: '<a href="#" class="govuk-link">Certification document</a>'
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set genericHtml %}
+    
+    {% endset -%}
+
+    {{ govukTabs({
+      items: [
+        {
+          label: "Overview",
+          id: "overview",
+          panel: {
+            html: overviewHtml
+          }
+        },
+        {
+          label: "Certification information",
+          id: "certification-information",
+          panel: {
+            html: certificationInformation
+          }
+        },
+        {
+          label: "Other",
+          id: "newtab2",
+          panel: {
+            html: genericHtml
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+{% endblock %}

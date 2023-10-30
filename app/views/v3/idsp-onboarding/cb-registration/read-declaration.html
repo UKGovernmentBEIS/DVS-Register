@@ -1,0 +1,68 @@
+<!-- prettier-ignore -->
+{% extends "layouts/prototype-cb.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Read declaration</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      By submitting this form, you confirm that to the best of your knowledge
+      and belief the information you have given is correct.
+    </p>
+
+    <h2 class="govuk-heading-m">Privacy</h2>
+    <p>
+      I understand that the data I have given can be used as set out in the
+      <a href="#">privacy policy</a>.
+    </p>
+
+    <p>
+      I consent to organisations, including financial institutions, providing
+      information to the gov.uk requested in relation to this application.
+    </p>
+
+    <h2 class="govuk-heading-m">Terms and Conditions</h2>
+    <p>I agree to the <a href="#">terms and conditions</a>.</p>
+
+    <p>
+      I understand that if I give false information that the submission can be
+      refused and I may be prosecuted.
+    </p>
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    <!-- prettier-ignore -->
+    {{ govukCheckboxes({
+      classes: "govuk-checkboxes--small",
+      items: [
+        {
+          value: "hmrc",
+          text: "I confirm that if I understand and accept this declaration."
+        }
+      ]
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v2/idsp-onboarding/cb-registration/provide-idsp-company-information-1"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

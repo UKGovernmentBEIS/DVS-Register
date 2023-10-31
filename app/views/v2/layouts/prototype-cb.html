@@ -1,0 +1,39 @@
+<!-- prettier-ignore -->
+{# For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts #} {% extends
+  "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
+  
+  {% block header %} 
+  {{ govukHeader({
+    homepageUrl: "/v2/idsp-onboarding/cb-registration",
+    serviceName: "Register an IDSP",
+    serviceUrl: "/v2/idsp-onboarding/cb-registration",
+    navigation: [
+      {
+        href: "/v2/idsp-onboarding/cb-registration/case-list-updated",
+        text: "Case List"
+      },
+      {
+        href: "/v2/idsp-onboarding/cb-registration/create-application",
+        text: "Create Application"
+      },
+      {
+        href: "#",
+        text: "Help"
+      }
+    ]
+  }) }}
+<div class="govuk-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">ALPHA</strong>
+      <span class="govuk-phase-banner__text"
+        >This is a new service - your <a href="#">feedback</a> will help us
+        improve it.</span
+      >
+    </p>
+  </div>
+</div>
+{% endblock %}

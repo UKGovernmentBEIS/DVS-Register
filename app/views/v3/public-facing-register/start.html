@@ -1,4 +1,4 @@
-{% extends "layouts/prototype.html" %} {% block pageTitle %} Find an identity
+{% extends "v3/layouts/prototype.html" %} {% block pageTitle %} Find an identity
 provider - GOV.UK {% endblock %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -14,19 +14,26 @@ provider - GOV.UK {% endblock %} {% block content %}
 
     <p>Registering takes around 5 minutes.</p>
 
-    {{ govukButton({ text: "Start now", href: "/search", isStartButton: true })
-    }}
+    {{ govukButton({ text: "Start now", href:
+    "/v3/public-facing-register/search", isStartButton: true }) }}
 
     <h2 class="govuk-heading-m">Learn more</h2>
 
-    <p>You can also find out more about this with the following <a
-        href="https://www.gov.uk/government/publications/digital-identity-certification-for-right-to-work-right-to-rent-and-criminal-record-checks/digital-identity-certification-for-right-to-work-right-to-rent-and-criminal-record-checks">guidance</a>.
+    <p>
+      You can also find out more about this with the following
+      <a
+        href="https://www.gov.uk/government/publications/digital-identity-certification-for-right-to-work-right-to-rent-and-criminal-record-checks/digital-identity-certification-for-right-to-work-right-to-rent-and-criminal-record-checks"
+        >guidance</a
+      >.
     </p>
     <p>You can't register for this service if you're in the UK illegally.</p>
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
       <h2 class="govuk-heading-m" id="subsection-title">Subsection</h2>
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="govuk-list govuk-!-font-size-16">

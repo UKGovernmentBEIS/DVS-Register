@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-{% extends "layouts/prototype-cb.html" %}
+{% extends "v3/layouts/prototype-cb.html" %}
 
 {% block beforeContent %} 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -47,11 +47,11 @@
           },
           items: [{
             text: 'Check eligibility',
-            href: '/v2/idsp-onboarding/cb-registration/check-eligibility.html',
+            href: '/v3/idsp-onboarding/cb-registration/check-eligibility.html',
             tag: "complete"
           }, {
             text: 'Read declaration',
-            href: '/v2/idsp-onboarding/cb-registration/read-declaration.html',
+            href: '/v3/idsp-onboarding/cb-registration/read-declaration.html',
             tag: "complete"
           }]
         },
@@ -61,12 +61,8 @@
           },
           items: [{
             text: 'Provide IDSP company information',
-            href: '/v2/idsp-onboarding/cb-registration/provide-idsp-company-information-1',
+            href: '/v3/idsp-onboarding/cb-registration/provide-idsp-company-information-1',
             tag: "complete"
-          }, {
-            text: 'Provide IDSP company documents',
-            href: '/v2/idsp-onboarding/cb-registration/provide-idsp-company-documents',
-            tag: "in progress"
           }]
         },
         {

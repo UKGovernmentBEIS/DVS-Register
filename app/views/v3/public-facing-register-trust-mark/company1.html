@@ -1,9 +1,15 @@
 {% extends "v3/layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find
 an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- prettier-ignore -->
-{{ govukBreadcrumbs({
-items: [ { text: "Home", href: "/v3/public-facing-register/start" }, { text: "Find an identity provider",
-href: "search" }, { text: "SecureID Platform"}] }) }}
+{{ govukBreadcrumbs({ 
+  items: [ 
+  { text:"Home", href: "/v3/public-facing-register-trust-mark/start" }, 
+  { text: "Verify a UK Digital Trust Mark", href: "/v3/public-facing-register-trust-mark/search" }, 
+  { text: "Search results", href: "/v3/public-facing-register-trust-mark/search-results" },
+  { text: "SecureID Platform"}
+  ]
+  })
+}}
 {% endblock %}
 
 {% block content %}

@@ -2,7 +2,11 @@
 provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- prettier-ignore -->
 {{ govukBreadcrumbs({ 
-  items: [ { text:"Home", href: "/v3/public-facing-register/start" }, { text: "Find an identity provider", href: "#" }] })
+  items: [ 
+  { text:"Home", href: "/v3/public-facing-register-trust-mark/start" }, 
+  { text: "Verify a UK Digital Trust Mark", href: "/v3/public-facing-register-trust-mark/search" }, 
+  { text: "Search results"}]
+  })
 }}
 
 {% endblock %}

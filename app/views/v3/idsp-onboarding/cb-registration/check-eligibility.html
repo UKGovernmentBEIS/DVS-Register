@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-{% extends "layouts/prototype.html" %}
+{% extends "v3/layouts/prototype.html" %}
 
 {% block beforeContent %} 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -37,30 +37,11 @@
       <li>URL Link to Certification Document</li>
     </ul>
 
-    <h2 class="govuk-heading-m">
-      The IDSP Company Documents that you'll need:
-    </h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Companies House</li>
-      <li>Legal Status</li>
-      <li>Directorships</li>
-      <li>Foreign Funding</li>
-      <li>Financial Probity</li>
-      <li>T/A address</li>
-      <li>Operations Address</li>
-      <li>Sanctions List</li>
-      <li>OFSI</li>
-      <li>UNFC (where applicable)</li>
-      <li>EC (where applicable)</li>
-      <li>TARIC (where applicable)</li>
-      <li>Existing accreditations</li>
-      <li>CAB webpage</li>
-    </ul>
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
       text: "Save and continue",
-      href: "/v2/idsp-onboarding/cb-registration/read-declaration"
+      href: "/v3/idsp-onboarding/cb-registration/read-declaration"
     }) }}
   </div>
 </div>

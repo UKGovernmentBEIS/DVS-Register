@@ -1,136 +1,141 @@
-{% extends "layouts/main.html" %}
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
-
-{% block pageTitle %}
-Register as a digital service provider
-{% endblock %}
-
-{% block header %}
+{% extends "v2/layouts/main.html" %} {% extends
+"govuk-prototype-kit/layouts/govuk-branded.html" %} {% block pageTitle %}
+Register as a digital service provider {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
-{{ govukHeader({
-homepageUrl: "#",
-serviceName: "Register as a digital service provider",
-serviceUrl: "#",
-navigation: [
-{
-href: "#",
-text: "Search",
-active: true
-},
-{
-href: "#",
-text: "About"
-},
-{
-href: "#",
-text: "Help"
-}
-]
-}) }}
-
+{{ govukHeader({ homepageUrl: "#", serviceName: "Register as a digital service
+provider", serviceUrl: "#", navigation: [ { href: "#", text: "Search", active:
+true }, { href: "#", text: "About" }, { href: "#", text: "Help" } ] }) }}
 
 <div class="govuk-width-container">
-    {{ govukBreadcrumbs({
-    items: [
-    {
-    text: "Home",
-    href: "#"
-    }
-    ]
-    }) }}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+  {{ govukBreadcrumbs({ items: [ { text: "Home", href: "#" } ] }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Submit information for an initial assessment
+      </h1>
+      <br />
 
-            <h1 class="govuk-heading-xl">
-                Submit information for an initial assessment
+      <br />
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          List all the geographical areas in which you curently provide or
+          expect to provide your service
+        </label>
+        <textarea
+          class="govuk-textarea"
+          id="more-detail"
+          name="moreDetail"
+          rows="5"
+          aria-describedby="more-detail-hint"
+        ></textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which of these roles apply to your organisation?
             </h1>
-            <br />
-
-            <br />
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="more-detail">
-                    List all the geographical areas in which you curently provide or expect to provide your service
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
-                    aria-describedby="more-detail-hint"></textarea>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">Tick all that apply.</div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="waste"
+                name="waste"
+                type="checkbox"
+                value="carcasses"
+              />
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                IDSP
+              </label>
             </div>
-
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-fieldset__heading">
-                            Which of these roles apply to your organisation?
-                        </h1>
-                    </legend>
-                    <div id="waste-hint" class="govuk-hint">
-                        Tick all that apply.
-                    </div>
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
-                                value="carcasses">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                IDSP
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
-                                value="mines">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                ASP
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
-                                value="farm">
-                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                OSP
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="waste-2"
+                name="waste"
+                type="checkbox"
+                value="mines"
+              />
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                ASP
+              </label>
             </div>
-            <br />
-
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="more-detail">
-                    Briefly describe the service you want to be certified with.
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
-                    aria-describedby="more-detail-hint"></textarea>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="waste-3"
+                name="waste"
+                type="checkbox"
+                value="farm"
+              />
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                OSP
+              </label>
             </div>
+          </div>
+        </fieldset>
+      </div>
+      <br />
 
-            <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
-                    Upload any relevant document to support the information provided above.
-                </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-              </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Briefly describe the service you want to be certified with.
+        </label>
+        <textarea
+          class="govuk-textarea"
+          id="more-detail"
+          name="moreDetail"
+          rows="5"
+          aria-describedby="more-detail-hint"
+        ></textarea>
+      </div>
 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload any relevant document to support the information provided
+          above.
+        </label>
+        <input
+          class="govuk-file-upload"
+          id="file-upload-1"
+          name="fileUpload1"
+          type="file"
+        />
+      </div>
 
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-label--m" for="more-detail">
-                    Please provide information on your financial capability to undergo full certification process and maintain for 2 years.
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
-                    aria-describedby="more-detail-hint"></textarea>
-            </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Please provide information on your financial capability to undergo
+          full certification process and maintain for 2 years.
+        </label>
+        <textarea
+          class="govuk-textarea"
+          id="more-detail"
+          name="moreDetail"
+          rows="5"
+          aria-describedby="more-detail-hint"
+        ></textarea>
+      </div>
 
-            <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
-                    Upload any relevant document to support the information provided above.
-                </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-              </div>
-            {{ govukButton({
-            text: "Continue",
-            href: "info-4.html",
-            isStartButton: false
-            }) }}
-        </div>
-
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload any relevant document to support the information provided
+          above.
+        </label>
+        <input
+          class="govuk-file-upload"
+          id="file-upload-1"
+          name="fileUpload1"
+          type="file"
+        />
+      </div>
+      {{ govukButton({ text: "Continue", href: "info-4.html", isStartButton:
+      false }) }}
     </div>
+  </div>
 </div>
 
 {% endblock %}

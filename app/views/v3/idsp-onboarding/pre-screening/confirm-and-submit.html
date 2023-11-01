@@ -1,68 +1,45 @@
-{% extends "layouts/main.html" %}
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
-
-{% block pageTitle %}
-Register as a digital service provider
-{% endblock %}
-
-{% block header %}
+{% extends "v3/layouts/main.html" %} {% extends
+"govuk-prototype-kit/layouts/govuk-branded.html" %} {% block pageTitle %}
+Register as a digital service provider {% endblock %} {% block header %}
 <!-- Blank header with no service name for the start page -->
-{{ govukHeader({
-homepageUrl: "#",
-serviceName: "Register as a digital service provider",
-serviceUrl: "#",
-navigation: [
-{
-href: "#",
-text: "Search",
-active: true
-},
-{
-href: "#",
-text: "About"
-},
-{
-href: "#",
-text: "Help"
-}
-]
-}) }}
-
+{{ govukHeader({ homepageUrl: "#", serviceName: "Register as a digital service
+provider", serviceUrl: "#", navigation: [ { href: "#", text: "Search", active:
+true }, { href: "#", text: "About" }, { href: "#", text: "Help" } ] }) }}
 
 <div class="govuk-width-container">
-    {{ govukBreadcrumbs({
-    items: [
-    {
-    text: "Home",
-    href: "#"
-    }
-    ]
-    }) }}
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">
-
-            <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">
-                    Application submitted
-                </h1>
-
-            </div>
-            <p class="govuk-body">Your information has been submitted to the Office of Digital Identities and Attributes (OfDIA) for initial assessment.</p>
-            <br />
-            <p class="govuk-body">We have sent you a confirmation email of your application to <strong>[supplied email].</strong> </p>
-            <br/>
-            <br />
-            <label class="govuk-label govuk-label--m">What happens next</label>
-            <p class="govuk-body">We aim to contact you within 1 week to tell you if we have completed the initial assessment of your application. </p>
-            <br />
-            <p class="govuk-body">If the assessment was successful, you will receive a Unique Reference Number  that you can use for your </p>
-            <br />
-            <p class="govuk-body"><a href="#">What did you think of this service?</a>(takes 30 seconds)</p>
-
-        </div>
-
+  {{ govukBreadcrumbs({ items: [ { text: "Home", href: "#" } ] }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application submitted</h1>
+      </div>
+      <p class="govuk-body">
+        Your information has been submitted to the Office of Digital Identities
+        and Attributes (OfDIA) for initial assessment.
+      </p>
+      <br />
+      <p class="govuk-body">
+        We have sent you a confirmation email of your application to
+        <strong>[supplied email].</strong>
+      </p>
+      <br />
+      <br />
+      <label class="govuk-label govuk-label--m">What happens next</label>
+      <p class="govuk-body">
+        We aim to contact you within 1 week to tell you if we have completed the
+        initial assessment of your application.
+      </p>
+      <br />
+      <p class="govuk-body">
+        If the assessment was successful, you will receive a Unique Reference
+        Number that you can use for your
+      </p>
+      <br />
+      <p class="govuk-body">
+        <a href="#">What did you think of this service?</a>(takes 30 seconds)
+      </p>
     </div>
+  </div>
 </div>
 
 {% endblock %}

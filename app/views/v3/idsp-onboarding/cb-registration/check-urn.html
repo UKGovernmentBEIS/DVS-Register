@@ -5,22 +5,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Create an application</h1>
+    <h1 class="govuk-heading-xl">Check an IDSP URN</h1>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <!-- prettier-ignore -->
-    {{ govukInput({
-      label: {
-        text: "IDSP Trading Name",
-        classes: "govuk-label--m",
-        isPageHeading: true
-      },
-      id: "trading-name",
-      name: "tradingName"
-    }) }}
     {{ govukInput({
       label: {
         text: "IDSP Company Name",
@@ -40,18 +31,15 @@
         text: "The IDSP you are applying for should have provided you with this number."
       },
       id: "unique-ref-number",
-      name: "uniqueRefNumber",
-      errorMessage: {
-        text: "The Unique Reference Number you entered does not exist. Please enter a valid Unique Reference Number."
-      }
+      name: "uniqueRefNumber"
     }) }}
 
 
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
-      text: "Create an application",
-      href: "/v3/idsp-onboarding/cb-registration/checklist"
+      text: "Validate",
+      href: "/v3/idsp-onboarding/cb-registration/check-urn-error"
     }) }}
   </div>
 </div>

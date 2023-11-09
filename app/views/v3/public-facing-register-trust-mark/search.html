@@ -4,7 +4,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 {{ govukBreadcrumbs({ 
   items: [ 
   { text:"Home", href: "/v3/public-facing-register-trust-mark/start" }, 
-  { text: "Verify a UK Digital Trust Mark" }
+  { text: "Search the register" }
   ]
   })
 }}
@@ -17,14 +17,20 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- START title -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Search the UK Digital Trust Register</h1>
-    <p>Find a company by name or trust mark number</p>
+    <h1 class="govuk-heading-xl">Search for a digital identity provider</h1>
+    <p>
+      Find information on a provider’s certification and schemes or see the full
+      list of providers
+    </p>
     <!-- prettier-ignore -->
     {{ govukInput({
       label: {
-        text: "Enter company name or UK Digital trust mark number",
+        text: "Enter company name:",
         classes: "govuk-label--m",
         isPageHeading: true
+      },
+      hint: {
+        text: "Search for trading name or registered name"
       },
       id: "company-name",
       name: "companyName"
@@ -40,14 +46,9 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-      text: "Advanced filter",
-      classes: "govuk-button--secondary"
-    }) }}
-
-    <!-- prettier-ignore -->
-    {{ govukDetails({
-      summaryText: "What does the trust-mark number look like?",
-      text: "The UK Digital trust mark number should be accompanying the DVS trust mark logo, for example, EA889922 or ACU983EE"
+      text: "See full list",
+      classes: "govuk-button--secondary",
+      href: "/v3/public-facing-register-trust-mark/search-results-full.html"
     }) }}
 
     <aside
@@ -55,7 +56,16 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
       role="complementary"
     >
       <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
-      <a href="#">What does the Trust Framework mean</a>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#"
+            ><a href="#" class="govuk-link"
+              >What is the UK Digital Identities and Attributes Trust
+              Framework</a
+            ></a
+          >
+        </li>
+      </ul>
     </aside>
   </div>
 </div>
@@ -67,7 +77,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
     document
       .querySelector("#company-name")
       .addEventListener("click", (event) => {
-        event.target.value = "EAB889922";
+        event.target.value = "Secure ID Systems";
       });
   })();
 </script>

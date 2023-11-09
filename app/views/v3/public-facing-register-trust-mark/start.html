@@ -4,21 +4,18 @@ an identity provider - GOV.UK {% endblock %} {% block content %}
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       <span class="govuk-caption-xl">Service</span>
-      Verify a UK Digital Trust Mark
+      Check a digital identity provider
     </h1>
 
     <p>
-      Use this service to verify if a provider that has received a UK Digital
-      Trust-Mark
+      Use this service to check if a provider is currently certified against the
+      UK Digital Identities and Attributes Trust Framework
     </p>
     <p>Use this service when you need to:</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Verify if a provider is trust-marked</li>
-      <li>
-        Review schemes a provider is certified against the UK Digital Trust
-        framework
-      </li>
-      <li>View provider histories and certificate expiration dates</li>
+      <li>Check if a provider is certified against the trust framework</li>
+      <li>Review which schemes a provider is certified against</li>
+      <li>View a provider’s history and certificate expiration date</li>
     </ul>
 
     {{ govukButton({ text: "Start now", href:
@@ -30,7 +27,9 @@ an identity provider - GOV.UK {% endblock %} {% block content %}
       role="complementary"
     >
       <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
-      <a href="#">What does the Trust Framework mean</a>
+      <a href="#" class="govuk-link"
+        >What is the UK Digital Identities and Attributes Trust Framework</a
+      >
     </aside>
   </div>
 
@@ -43,7 +42,7 @@ an identity provider - GOV.UK {% endblock %} {% block content %}
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="govuk-list govuk-!-font-size-16">
           <li>
-            <a href="#"> Digital identity and attributes </a>
+            <a href="#" class="govuk-link"> Digital identities</a>
           </li>
         </ul>
       </nav>
@@ -56,12 +55,18 @@ an identity provider - GOV.UK {% endblock %} {% block content %}
       <nav role="navigation" aria-labelledby="subsection-title">
         <ul class="govuk-list govuk-!-font-size-16">
           <li>
-            <a href="#"> What is the UK Digital Trust Mark? </a>
+            <a href="#" class="govuk-link"
+              >What is a digital identity provider?</a
+            >
           </li>
           <li>
-            <a href="#">
-              What you get from adopting trust-marked digital identities and
-              attributes
+            <a href="#" class="govuk-link">
+              How do digital identity providers get certified?
+            </a>
+          </li>
+          <li>
+            <a href="#" class="govuk-link">
+              When do I need a digital identity provider?
             </a>
           </li>
         </ul>

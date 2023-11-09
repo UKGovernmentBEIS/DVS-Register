@@ -13,7 +13,7 @@ router.get("/", function (req, res) {
   res.redirect("/index");
 });
 
-// Temporary Routing for the IDSP Onboarding, full journey will be fleshed out
+// Temporary Routing for the Digital Identity Provider Onboarding, full journey will be fleshed out
 router.get(
   "/" + version + "/idsp-onboarding/ofdia-dashboard",
   function (req, res) {

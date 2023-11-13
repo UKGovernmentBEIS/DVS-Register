@@ -32,6 +32,18 @@
     color: white !important;
   }
 
+  .section-card{
+    height: 3rem;
+    padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 15px;
+    justify-content: space-between;
+  }
+  .urn-header{
+    color: white;
+    margin-bottom: 0;
+  }
+  .grey-header{
+    margin-bottom: 0;
+  }
   .card {
     width: 100%;
     padding-left: 1rem;
@@ -40,11 +52,46 @@
     justify-content: space-between;
   }
 
-  .red {
-    background-color: #d4351c;
+  .blue {
+    background-color: #1d70b8;
+  }
+
+  .black{
+    background-color: #000;
   }
 
   .grey {
     background-color: #b1b4b6;
+  }
+  .other-grey{
+    background-color: #F3F2F1;
+  }
+
+  .sub-section-grey{
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .rtw-tag{
+    margin: 0px 0px 1.25rem;
+  }
+  .schemes{
+    padding-bottom: 0.6rem;
+  }
+  .time-stamp-text {
+    color: #505a5f;
+    font-size: 13px;
+    
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  .header-padding{
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-page{
+    display: flex;
+    justify-content: center;
   }
 }

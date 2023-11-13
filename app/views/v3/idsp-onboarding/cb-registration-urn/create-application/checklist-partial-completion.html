@@ -1,0 +1,91 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "case-list"
+}) }}  
+{% endblock %} 
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Create application </span>
+      SecureID Platform
+      <span class="govuk-heading-s"
+        >Application reference number: QQ123456C-123</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Application incomplete</h2>
+    <p>You have completed 2 of 5 sections.</p>
+    <!-- prettier-ignore -->
+    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+    {{ govukDetails({
+      summaryText: "I need help doing things online",
+      text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+    }) }}
+
+    <!-- prettier-ignore -->
+    {%- from "app/components/task-list/macro.njk" import dsitTasklist -%}
+
+    {{ dsitTasklist({
+      sections: [
+        {
+          heading: {
+            text: 'Check before you start'
+          },
+          items: [{
+            text: 'Check that you have all the information',
+            href: '/v3/idsp-onboarding/cb-registration-urn/create-application/check-eligibility.html',
+            tag: "complete"
+          }, {
+            text: 'Accept declaration',
+            href: '/v3/idsp-onboarding/cb-registration-urn/create-application/read-declaration.html',
+            tag: "complete"
+          }]
+        },
+        {
+          heading: {
+            text: 'Prepare application'
+          },
+          items: [{
+            text: 'Provide company information',
+            href: '/v3/idsp-onboarding/cb-registration-urn/create-application/provide-idsp-company-information-1',
+            tag: "in progress"
+          },
+          {
+            text: 'Provide certification details',
+            href: '/v3/idsp-onboarding/cb-registration-urn/create-application/provide-idsp-company-information-1',
+            tag: "not started"
+          }
+          ]
+        },
+        {
+          heading: {
+            text: 'Apply'
+          },
+          items: [{
+            text: 'Review and submit',
+            href: '#',
+            tag: "cannot start"
+          }]
+        }
+      ]
+    }) }}
+    <p>This application has been saved to your <a href="#">drafts</a>.</p>
+  </div>
+</div>
+
+{% endblock %}

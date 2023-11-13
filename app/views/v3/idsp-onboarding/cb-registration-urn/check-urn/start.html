@@ -1,0 +1,55 @@
+{% extends "v3/layouts/prototype-cb-urn.html" %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Check unique reference number (URN)</h1>
+
+    <p>
+      Before you start the certification process you need to confirm if the
+      digital identity provider that you will be working with has passed the
+      pre-screening.
+    </p>
+    <p>
+      If they have passed the pre-sceening, they have been issued a unique
+      reference number (URN) that they have shared with you trough email.
+    </p>
+    <p>
+      This form allows you to check if the unique reference number exists and is
+      associated with digital identity provider that shared this number with
+      you.
+    </p>
+    <p>To complete the check you will need</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Verify if a provider is trust-marked</li>
+      <li>Digital identity providers registered name</li>
+      <li>Unique reference number that they provided</li>
+    </ul>
+
+    {{ govukButton({ text: "Start now", href:
+    "/v3/idsp-onboarding/cb-registration-urn/check-urn/check-number",
+    isStartButton: true }) }}
+
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
+      <ul class="govuk-list">
+        <li>
+          <a href="#" class="gov-uk-link"
+            >What are the steps to publish digital identity provider on the
+            register?
+          </a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link"
+            >What is the unique reference number and how it is used?
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+
+{% endblock %}

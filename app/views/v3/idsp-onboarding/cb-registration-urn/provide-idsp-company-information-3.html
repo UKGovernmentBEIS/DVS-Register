@@ -1,0 +1,102 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Register an IDSP</span>
+      Strawberry Jam
+      <span class="govuk-caption-l govuk-!-margin-top-1"
+        >Reference Number: HDJ2123F</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Please enter basic information about the IDSP. These information will
+      appear in the public-facing register.
+    </p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <!-- prettier-ignore -->
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    {{ govukCheckboxes({
+      name: "waste",
+      fieldset: {
+        legend: {
+          text: "Schemes Certified against",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Tick all the schemes that the IDSP has been certified against for this application."
+      },
+      items: [
+        {
+          value: "right-to-work",
+          text: "Right to Work"
+        },
+        {
+          value: "right-to-rent",
+          text: "Right to Rent"
+        },
+        {
+          value: "disclosure-barring-service",
+          text: "Disclosure and Barring Service"
+        }
+      ]
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "URL Link to Certification Document",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Please provide a link to the document containing the IDSP Certificate. The file should usually be hosted to either your organisation’s website or another filehosting website."
+      },
+      id: "url-cert-doc",
+      name: "urlToCertDoc"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Link or File Name (optional)",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "The link or file name must not be the same as the URL Link above. This helps site visitors know they are looking at the correct file."
+      },
+      id: "link-to-file",
+      name: "linkToFile"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v3/idsp-onboarding/cb-registration-urn/application-summary.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

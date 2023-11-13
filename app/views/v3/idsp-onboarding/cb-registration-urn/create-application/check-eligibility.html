@@ -1,0 +1,70 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Check before you start</span>
+      Information you'll need
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      To complete this application you will need information and documents
+      listed bellow. Please make sure you have this information. You can save
+      your progress in this application at every step and return to complete it
+      later.
+    </p>
+    <h2 class="govuk-heading-m">You’ll need digital identity providers:</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Registered Name</li>
+      <li>Unique Reference Number</li>
+      <li>Trading Name</li>
+      <li>Companies House Number</li>
+      <li>UK Company Address</li>
+      <li>UK Telephone Number</li>
+      <li>Email</li>
+      <li>Website</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">
+      Documents and information related to digital identity providers
+      certification:
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Role Types</li>
+      <li>Schemes certified against</li>
+      <li>Identity profiles</li>
+      <li>Link to certificate of conformity</li>
+      <li>Upload of certificate of conformity</li>
+      <li>Certificate of conformity issue and expiry date</li>
+      <li>Link to schedule of certification</li>
+      <li>Upload of schedule of certification</li>
+      <li>Schedule of certification issue and expiry date</li>
+    </ul>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v3/idsp-onboarding/cb-registration-urn/create-application/accept-declaration"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

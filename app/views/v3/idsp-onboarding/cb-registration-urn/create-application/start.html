@@ -1,0 +1,58 @@
+{% extends "v3/layouts/prototype-cb-urn.html" %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Create application</h1>
+
+    <p>
+      For digital identity provider to be published on the DVS register you need
+      to create an application in this form.
+    </p>
+    <p>
+      Once you create the application you will be able to track the status of
+      the application in the case list.
+    </p>
+    <p>
+      If they have passed the pre-sceening, they have been issued a unique
+      reference number (URN) that they have shared with you trough email.
+    </p>
+
+    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %} {{
+    govukInsetText({ text: "You need to check digital identity providers unique
+    reference number before the certification, and cannot create application
+    without it." }) }}
+
+    <p>To start a new application, you’ll need digital identities providers:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Registered name</li>
+      <li>Unique reference number</li>
+    </ul>
+
+    {{ govukButton({ text: "Start now", href:
+    "/v3/idsp-onboarding/cb-registration-urn/create-application/check-number",
+    isStartButton: true }) }}
+
+    <aside
+      class="govuk-prototype-kit-common-templates-related-items"
+      role="complementary"
+    >
+      <h2 class="govuk-heading-m" id="subsection-title">Explore the topic</h2>
+      <ul class="govuk-list">
+        <li>
+          <a href="#" class="gov-uk-link"
+            >What are the steps to publish digital identity provider on the
+            register?
+          </a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link"
+            >What is the unique reference number and how it is used?
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+
+{% endblock %}

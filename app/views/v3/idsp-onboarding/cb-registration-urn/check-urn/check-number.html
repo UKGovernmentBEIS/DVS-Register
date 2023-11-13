@@ -1,0 +1,50 @@
+{% extends "/v3/layouts/prototype-cb-urn.html" %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Check unique reference number</span>
+      Digital identity provider
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "Registered name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-!-width-three-quarters",
+      id: "registered-name",
+      name: "egisteredName"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Unique Reference Number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-!-width-three-quarters",
+      hint: {
+        text: "Digital identity provider has shared this number via email with you. For example, 'QQ 12 34 56 C'."
+      },
+      id: "unique-ref-number",
+      name: "uniqueRefNumber"
+    }) }}
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Check",
+      href: "/v3/idsp-onboarding/cb-registration-urn/check-urn/check-number-error"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

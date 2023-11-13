@@ -2,461 +2,76 @@
 {% endblock %} {% block header %}
 
 <div class="ofdia-view-wrapper">
-  <div class="govuk-grid-row">
-    <header class="govuk-header" role="banner" data-module="govuk-header">
-      <div class="govuk-header__container govuk-width-container">
-        <div class="left clear">
-          <h2 class="govuk-heading-m-white header-heading">
-            OfDIA Review Platform
-          </h2>
-        </div>
-        <div class="right">
-          <strong class="govuk-tag"> Administrator View </strong>
-          |
-          <a class="govuk-header__link" href="#">
-            <strong>
-              <svg
-                width="15"
-                height="10"
-                viewBox="0 0 15 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Icon: Chevron" clip-path="url(#clip0_37814_2232)">
-                  <path
-                    id="Icon: Chevron_2"
-                    d="M14 1.5L7.5 8L1 1.5"
-                    stroke="white"
-                    stroke-width="2"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_37814_2232">
-                    <rect
-                      width="15"
-                      height="10"
-                      fill="white"
-                      transform="translate(15 10) rotate(-180)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-
-              Menu</strong
-            >
-          </a>
-          |
-          <a class="govuk-header__link" href="#">
-            <strong>Sign Out</strong>
-          </a>
-        </div>
-      </div>
-    </header>
-  </div>
-  <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">Dashboard</a>
-        </li>
-      </ol>
-    </div>
-
-    <h1 class="govuk-heading-xl">Dashboard</h1>
-
-    <hr
-      class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
-    />
-
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">Recent Activity</h2>
-          </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row recent-activity-item">
-                <label class="govuk-heading-s">Raspberry Jam</label>
-                <p class="govuk-heading-s">Full Checks Completed</p>
-                11-Jul-'23 03:16 PM by OfDodo
-                <br />
-                <span class="case-text">Case DFD312G</span>
-                <br />
-                <a href="#" class="govuk-link govuk-!-text-align-right"
-                  >View Details<br
-                /></a>
-                <br />
-              </div>
+        <header class="govuk-header" role="banner" data-module="govuk-header">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="left clear">
+                    <h2 class="govuk-heading-m-white header-heading">
+                        OfDIA Review Platform
+                    </h2>
+                </div>
+                <div class="right">
+                    <strong class="govuk-tag"> Administrator View </strong>
+                    |
+                    <a class="govuk-header__link" href="#">
+                        <strong>
+                            <svg width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="Icon: Chevron" clip-path="url(#clip0_37814_2232)">
+                                    <path id="Icon: Chevron_2" d="M14 1.5L7.5 8L1 1.5" stroke="white"
+                                        stroke-width="2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_37814_2232">
+                                        <rect width="15" height="10" fill="white"
+                                            transform="translate(15 10) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
 
-              <div class="govuk-summary-list__row recent-activity-item">
-                <label class="govuk-heading-s">Strawberry Jam</label>
-                <p class="govuk-heading-s">New information Received</p>
-                27-Jan-'22 10:46 PM by Ada
-                <br />
-                <span class="case-text">Case DFD312G</span>
-                <br />
-                <a href="#" class="govuk-link govuk-!-text-align-right"
-                  >View Details<br
-                /></a>
-                <br />
-              </div>
-              <div class="govuk-summary-list__row recent-activity-item">
-                <label class="govuk-heading-s">Apricot Jam</label>
-                <p class="govuk-heading-s">Application Received</p>
-                07-Mar-'22 07:03 AM by Dan
-
-                <br />
-                <span class="case-text">Case DFD312G</span>
-                <br />
-                <a href="#" class="govuk-link govuk-!-text-align-right"
-                  >View Details<br
-                /></a>
-                <br />
-              </div>
-              <div class="govuk-summary-list__row recent-activity-item">
-                <label class="govuk-heading-s">Fig Jam</label>
-                <p class="govuk-heading-s">
-                  Request sent for further information
-                </p>
-                27-Jan-'22 10:46 PM by Ada
-                <br />
-                <span class="case-text">Case DFD312G</span>
-                <br />
-                <a href="#" class="govuk-link govuk-!-text-align-right"
-                  >View Details</a
-                >
-                <br />
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <div class="govuk-grid-column-three-quarters">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third">
-            <div class="card red">
-              <h1 class="govuk-heading-xl white">2</h1>
-              <h1 class="govuk-heading-m white">
-                Applications waiting to be reviewed
-              </h1>
+                            Menu</strong>
+                    </a>
+                    |
+                    <a class="govuk-header__link" href="#">
+                        <strong>Sign Out</strong>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <div class="card grey">
-              <h1 class="govuk-heading-xl white">2</h1>
-              <h1 class="govuk-heading-m white">
-                Applications with less than 5 days left to complete checks
-              </h1>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <div class="card grey">
-              <h1 class="govuk-heading-xl white">1</h1>
-              <h1 class="govuk-heading-m white">
-                Application awaiting additional documentation
-              </h1>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="govuk-grid-row search-container">
-          <div class="govuk-grid-column-two-third">
-            <br />
-            <h1 class="govuk-heading-m">Search</h1>
-            <label class="govuk-label" for="width-20">
-              Search for IDSP, CB name, or reference number
-            </label>
-            <div class="govuk-input__wrapper">
-              <input
-                class="govuk-input govuk-input--width-20"
-                id="width-20"
-                name="width20"
-                type="text"
-              />
-              <div class="govuk-input__suffix" aria-hidden="true">
-                <svg
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Icon: Search">
-                    <path
-                      id="Vector"
-                      d="M8.90102 14.4685C12.385 14.4685 15.2093 11.6442 15.2093 8.1603C15.2093 4.67635 12.385 1.85205 8.90102 1.85205C5.41707 1.85205 2.59277 4.67635 2.59277 8.1603C2.59277 11.6442 5.41707 14.4685 8.90102 14.4685Z"
-                      stroke="white"
-                      stroke-width="2.22222"
-                    />
-                    <path
-                      id="Vector_2"
-                      d="M13.2344 12.8584L19.5904 19.2144"
-                      stroke="white"
-                      stroke-width="2.22222"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <br />
-            <a href="#">Clear search</a>
-          </div>
-        </div>
-        <br />
-        <br />
-        <table class="govuk-table" data-module="moj-sortable-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header" aria-sort="ascending">
-                IDSP
-              </th>
-
-              <th scope="col" class="govuk-table__header" aria-sort="none">
-                Reference #
-              </th>
-
-              <th scope="col" class="govuk-table__header" aria-sort="none">
-                Cert. body
-              </th>
-
-              <th
-                scope="col"
-                class="govuk-table__header govuk-table__header--numeric"
-                aria-sort="none"
-              >
-                Schemes
-              </th>
-
-              <th
-                scope="col"
-                class="govuk-table__header govuk-table__header--numeric"
-                aria-sort="none"
-              >
-                Time submitted
-              </th>
-
-              <th
-                scope="col"
-                class="govuk-table__header govuk-table__header--numeric"
-                aria-sort="none"
-              >
-                Status
-              </th>
-
-              <th
-                scope="col"
-                class="govuk-table__header govuk-table__header--numeric"
-                aria-sort="none"
-              >
-                Days left to complete checks
-              </th>
-
-              <th
-                scope="col"
-                class="govuk-table__header govuk-table__header--numeric"
-                aria-sort="none"
-              >
-                Details
-              </th>
-            </tr>
-          </thead>
-
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Global IDSP</td>
-
-              <td class="govuk-table__cell">HDJ2123F</td>
-
-              <td class="govuk-table__cell">DEF</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag--grey">RTW</strong><br />
-                <strong class="govuk-tag--grey">RTR</strong> <br />
-                <strong class="govuk-tag--grey">DBS</strong>
-              </td>
-
-              <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--green"> APPROVED </strong>
-              </td>
-              <td class="govuk-table__cell">N/A</td>
-
-              <td class="govuk-table__cell"><a href="#">View</a></td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">IdentifiedID</td>
-
-              <td class="govuk-table__cell">HDJ2123F</td>
-
-              <td class="govuk-table__cell">DEF</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag--grey">RTW</strong><br />
-                <strong class="govuk-tag--grey">RTR</strong> <br />
-                <strong class="govuk-tag--grey">DBS</strong>
-              </td>
-
-              <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                  PAUSED - ADDITIONAL INFO NEEDED
-                </strong>
-              </td>
-
-              <td class="govuk-table__cell">14 days</td>
-
-              <td class="govuk-table__cell"><a href="#">View</a></td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">SecureID Platform</td>
-
-              <td class="govuk-table__cell">HDJ2123F</td>
-
-              <td class="govuk-table__cell">DEF</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag--grey">RTW</strong><br />
-                <strong class="govuk-tag--grey">RTR</strong> <br />
-              </td>
-
-              <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--blue"> RECEIVED </strong>
-              </td>
-
-              <td class="govuk-table__cell">12 days</td>
-
-              <td class="govuk-table__cell">
-                <a href="initial-checks.html">View</a>
-              </td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Bubble Review</td>
-
-              <td class="govuk-table__cell">HDJ2123F</td>
-
-              <td class="govuk-table__cell">DEF</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag--grey">RTW</strong><br />
-                <strong class="govuk-tag--grey">RTR</strong> <br />
-                <strong class="govuk-tag--grey">DBS</strong>
-              </td>
-
-              <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--yellow"> IN REVIEW </strong>
-              </td>
-              <td class="govuk-table__cell">14 days</td>
-              <td class="govuk-table__cell"><a href="#">View</a></td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Orange Identity</td>
-
-              <td class="govuk-table__cell">HDJ2123F</td>
-
-              <td class="govuk-table__cell">DEF</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag--grey">RTW</strong><br />
-                <strong class="govuk-tag--grey">RTR</strong> <br />
-                <strong class="govuk-tag--grey">DBS</strong>
-              </td>
-
-              <td class="govuk-table__cell">11:20am on 1 Oct 2023</td>
-
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag"> PUBLISHED </strong>
-              </td>
-
-              <td class="govuk-table__cell">N/A</td>
-              <td class="govuk-table__cell"><a href="#">View</a></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <nav class="govuk-pagination" role="navigation" aria-label="results">
-          <div class="govuk-pagination__prev">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-              <svg
-                class="govuk-pagination__icon govuk-pagination__icon--prev"
-                xmlns="http://www.w3.org/2000/svg"
-                height="13"
-                width="15"
-                aria-hidden="true"
-                focusable="false"
-                viewBox="0 0 15 13"
-              >
-                <path
-                  d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"
-                ></path>
-              </svg>
-              <span class="govuk-pagination__link-title">Previous</span></a
-            >
-          </div>
-          <ul class="govuk-pagination__list">
-            <li class="govuk-pagination__item govuk-pagination__item--current">
-              <a
-                class="govuk-link govuk-pagination__link"
-                href="#"
-                aria-label="Page 1"
-              >
-                1
-              </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a
-                class="govuk-link govuk-pagination__link"
-                href="#"
-                aria-label="Page 2"
-                aria-current="page"
-              >
-                2
-              </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a
-                class="govuk-link govuk-pagination__link"
-                href="#"
-                aria-label="Page 3"
-              >
-                3
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-pagination__next">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-              <span class="govuk-pagination__link-title">Next</span>
-              <svg
-                class="govuk-pagination__icon govuk-pagination__icon--next"
-                xmlns="http://www.w3.org/2000/svg"
-                height="13"
-                width="15"
-                aria-hidden="true"
-                focusable="false"
-                viewBox="0 0 15 13"
-              >
-                <path
-                  d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"
-                ></path></svg
-            ></a>
-          </div>
-        </nav>
-      </div>
+        </header>
     </div>
-  </div>
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="#">Home</a>
+                </li>
+            </ol>
+        </div>
+
+        <h1 class="govuk-heading-xl">OfDIA Review Platform</h1>
+        <br />
+        <p class="govuk-body-l">Process applications of digital identity providers</p>
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+                <h3 class="govuk-heading-m"><a href="pre-screening-dashboard.html">Pre-Screening Dashboard </a></h3>
+                <p class="govuk-body-m">Applications of digital identity providers for an
+                    initial assessment</p>
+            </div>
+            <div class="govuk-grid-column-one-half">
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+                <h3 class="govuk-heading-m"><a href="register-application-dashboard.html">Register Application Dashboard </a></h3>
+                <p class="govuk-body-m">Applications of certified digital identity providers to become published onto
+                    the register</p>
+
+
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

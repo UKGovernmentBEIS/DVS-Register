@@ -8,7 +8,7 @@ Register as a digital service provider
 <!-- Blank header with no service name for the start page -->
 {{ govukHeader({
 homepageUrl: "#",
-serviceName: "Register as a digital service provider",
+serviceName: "Submit a pre-assessment application as a digital identity provider",
 serviceUrl: "#",
 navigation: [
 {
@@ -26,6 +26,16 @@ text: "Help"
 }
 ]
 }) }}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+<div class="govuk-width-container">
+    {{ govukPhaseBanner({
+        tag: {
+          text: "Alpha"
+        },
+        html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      }) }}
+</div>
 {% endblock %}
 
 {% block pageScripts %}
@@ -36,25 +46,36 @@ text: "Help"
 {% endblock %}
 
 
+
+
 {% block content %}
 <div class="govuk-grid-row">
+    
+
     <div class="govuk-grid-column-two-thirds">
 
-        
+
         <h1 class="govuk-heading-xl">
-            Submit information for an initial assessment
+            Submit a pre-assessment application as a digital identity provider
         </h1>
         <br />
         <br />
-        <p>Once you have decided you would like to register as a digital identity service provider (IDSP), you must
-            submit your information for an initial assessment. </p>
+        
+        <p>Once you have decided to apply to be on the DVS Register, you must submit a pre-assessment application. Too apply, you must:  </p>
+
+        <ul class="govuk-body">
+            <li>be a registered company with Companies House in the UK or, if your parent company is international, one that is equivalent in your jurisdiction</li>
+            <li>be in the process of having a registered office in the UK</li>
+        </ul>
         <p>You will be assessed by the Office of Digital Identities and Attributes to determine suitability to proceed
             with the certification process. You will receive a confirmation from the office once the initial assessment
             has been completed.</p>
 
+        <p>You will receive confirmation from the Office once the review of your pre-assessment application has been completed.</p>
 
 
-        <a href="declaration.html" role="button" draggable="false"
+
+        <a href="confirm.html" role="button" draggable="false"
             class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
             data-module="govuk-button">
             Start now
@@ -81,7 +102,7 @@ text: "Help"
             class="app-step-nav govuk-!-display-none-print js-hidden" data-show-text="Show" data-hide-text="Hide"
             data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
             <ol class="app-step-nav__steps">
-                <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step"
+                <li class="app-step-nav__step js-step" aria-current="step"
                     id="check-you-re-allowed-to-drive">
                     <div class="app-step-nav__header js-toggle-panel" data-position="1">
                         <h3 class="app-step-nav__title">
@@ -123,7 +144,7 @@ text: "Help"
                     </div>
 
                 </li>
-                <li class="app-step-nav__step js-step" id="get-a-provisional-licence">
+                <li class="app-step-nav__step js-step app-step-nav__step--active" id="get-a-provisional-licence">
                     <div class="app-step-nav__header js-toggle-panel" data-position="2">
                         <h3 class="app-step-nav__title">
                             <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -137,15 +158,13 @@ text: "Help"
                             </span>
 
                             <span class="js-step-title">
-                                Submit information
-                                for an initial
-                                assessment
+                                Submit a pre-assessment application as a digital identity provider
                             </span>
                         </h3>
                     </div>
 
                     <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
-                        
+
 
                     </div>
 
@@ -164,8 +183,7 @@ text: "Help"
                             </span>
 
                             <span class="js-step-title">
-                                Find a certifying body
-                                to get certified
+                                Engage with one of the selected conformity assessment bodies to get certification
                             </span>
                         </h3>
                     </div>
@@ -173,7 +191,7 @@ text: "Help"
                     <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
                         <p class="app-step-nav__paragraph">You need to find a certifying body to get certified.</p>
 
-                        
+
 
                     </div>
 
@@ -198,7 +216,7 @@ text: "Help"
                     </div>
 
                     <div class="app-step-nav__panel js-panel" id="step-panel-prepare-for-your-theory-test-4">
-                        
+
                     </div>
 
                 </li>
@@ -216,15 +234,13 @@ text: "Help"
                             </span>
 
                             <span class="js-step-title">
-                                Check your
-                                responsibilities as an
-                                IDSP
+                                OfDIA reviews certifications details
                             </span>
                         </h3>
                     </div>
 
                     <div class="app-step-nav__panel js-panel" id="step-panel-book-and-manage-your-theory-test-5">
-                        
+
 
                     </div>
 
@@ -244,13 +260,13 @@ text: "Help"
 
                             <span class="js-step-title">
                                 See your information
-                                on the public list
+                                on the DVS register
                             </span>
                         </h3>
                     </div>
 
                     <div class="app-step-nav__panel js-panel" id="step-panel-book-and-manage-your-driving-test-6">
-                        
+
 
                     </div>
 
@@ -270,13 +286,13 @@ text: "Help"
 
                             <span class="js-step-title">
                                 Monitor your
-                                certification
+                                certification status
                             </span>
                         </h3>
                     </div>
 
                     <div class="app-step-nav__panel js-panel" id="step-panel-when-you-pass-7">
-                        
+
                     </div>
 
                 </li>

@@ -1,0 +1,587 @@
+{% extends "v3/layouts/main.html" %} {% extends
+"govuk-prototype-kit/layouts/govuk-branded.html" %} {% block pageTitle %}
+Register as a digital service provider {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader({ homepageUrl: "#", serviceName: "Register as a digital service
+provider", serviceUrl: "#", navigation: [ { href: "#", text: "Search", active:
+true }, { href: "#", text: "About" }, { href: "#", text: "Help" } ] }) }}
+
+<div class="govuk-width-container">
+    {{ govukPhaseBanner({
+    tag: {
+    text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+    <br />
+    <a href="#" class="govuk-back-link">Back</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-width-container">
+            <p class="govuk-body summary-heading">Application Summary</p>
+            <h1 class="govuk-heading-xl">
+                Submit information for an initial assessment
+            </h1>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Company Information</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Registered Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Secure ID Platform
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> age</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Trading Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Safe ID Check
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> nationality</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Companies House Number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                08998951
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Email
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                info@secureidplatform.com
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Website
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                www.secureidplatform.com
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                UK Telephone Number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                +44 (0) 2045511332
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Fora, 180 Borough High Street, London,
+                                SE31 1LB,
+                                United Kingdom
+                                Value
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Contact Details of the Senior Authorising Officer</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Full Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                John Lawrence
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> whether details are known</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Role
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Policy and Certification Lead
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> relationship to lead tenant</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Email
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                john.lawrence@secureidplatform.com
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> age</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                UK telephone number
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                +44 (0) 2225511332
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Company Information</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                List all the geographic areas in which you currently provide or expect to provide your
+                                servce
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                United Kingdom, Ireland, The Netherlands
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> whether details are known</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Role Types
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Identity, Attribute
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> relationship to lead tenant</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                If you ticked more than one role type above, please provide more details as to why
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Details Provided here
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> age</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is your service operationally ready?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you have a published privacy statement?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you have a published service description?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is there any other information that you would like to provide to assist your answers in
+                                the previous questions
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                None
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Have there been any outstanding administration events in your organisation or has your
+                                organisation, at any time, been the subject of insolvency?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                No
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Please provide information on your financial capability to undergo full certification
+                                process and maintain for 2 years.
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Details provided here
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Please provide information on your financial capability to maintain quality ongoing
+                                service.
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Details provided here
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you confirm that you have the physical resources to maintain quality service to
+                                users?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you have a warranty statement?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you have a liability statement?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you confirm your understanding and commitment to the legal requirements applicable to
+                                your service?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you confirm your understanding and commitment to the legal requirements applicable to
+                                your service?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you confirm your compliance relating to the protection of important information from
+                                loss, destruction, unauthorised amendment and falsification?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is there any other information that you would like to provide to assist your answers in
+                                the previous questions?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                None
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Briefly describe the service you want to be certified
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Details provided here
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Provide details of your compliance and conformity
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                An internationally-recognised Quality Management or Service System equivalent to ISO
+                                9001 or ITIL
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Other details of compliance and conformity
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Details provided here
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Please confirm that you follow, or will agree to follow, the following standards or
+                                their relevant equivalents
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                GPG 44, GPG 45, Transaction Monitoring Guidance, Biometrics Guidance
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                If your company is cloud-based, do you follow ISO 27018 standard or equivalent?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is there any other information that you would like to provide to assist your answers in
+                                the previous questions?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                None
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> working situation</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Other Supporting Information</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Is there any other information that you would like to provide to assist your
+                                application?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                None
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="#">
+                                    Change<span class="govuk-visually-hidden"> whether details are known</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">Accept Declaration</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <p class="govuk-body">
+                                I agree to the <a href="#">terms and conditions</a>
+                            </p>
+                            <p class="govuk-body">
+                                I understand that if I give false information that the submission can be
+                                refused.
+                            </p>
+
+                            <p class="govuk-body">
+                                I understand that the data I have given can be used as set out in the
+                                <a href="#">privacy policy.</a>
+                            </p>
+
+
+
+                            <p class="govuk-body">
+                                I consent to organisations, including financial institutions, providing
+                                information to the gov.uk requested in relation to this application.
+                            </p>
+
+
+
+                            <br />
+
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox"
+                                    value="none" data-behaviour="exclusive" />
+                                <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                                    By submitting this form, I confirm that to the best of my knowledge and belief,
+                                    the information I have given is correct.
+
+                                </label>
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            {{ govukButton({ text: "Confirm and Submit", href:
+            "confirm-and-submit.html", isStartButton: false }) }}
+        </div>
+
+
+
+    </div>
+</div>
+
+{% endblock %}

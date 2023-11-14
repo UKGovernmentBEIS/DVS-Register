@@ -1,0 +1,96 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+Register as a digital service provider
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader({
+homepageUrl: "#",
+serviceName: "Submit a pre-assessment application as a digital identity provider",
+serviceUrl: "#",
+navigation: [
+{
+href: "#",
+text: "Search",
+active: true
+},
+{
+href: "#",
+text: "About"
+},
+{
+href: "#",
+text: "Help"
+}
+]
+}) }}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+<div class="govuk-width-container">
+    {{ govukPhaseBanner({
+        tag: {
+          text: "Alpha"
+        },
+        html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      }) }}
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+
+    
+        <h1 class="govuk-heading-l">
+            Before you start
+        </h1>
+        <br />
+        <br />
+
+        <p class="govuk-body">
+            We will now ask you a few questions about your eligibility to be on the DVS register. You will need to pass the pre-assessment stage in order to get a certification for the purposes on being
+        </p>
+
+        <p class="govuk-body">
+            To complete the pre-assessment application form, you’ll need to provide information about your company’s:
+            <ul class="govuk-body">
+                <li>Registered name</li>
+                <li>Registration number</li>
+                <li>Email</li>
+                <li>Website</li>
+                <li>UK telephone number</li>
+                <li>UK address</li>
+                <li>Availability of a published privacy statement</li>
+                <li>Published service description</li>
+                <li>A warranty statement</li>
+                <li>A liability statement</li>
+                <li>Document proof of your financial capability and physical resources to undergo full certification process and maintain for 2 years</li>
+                <li>Document proof of your financial capability to maintain ongoing quality service</li>
+                <li>Status of your compliance and conformity to internationally-recognised standards</li>
+                <li>Standards (or equivalents) like the <a href="#">GPG 44</a>, <a href="#">GPG 45</a>, <a href="#">Transaction Monitoring Guidance</a>, <a href="#">Biometrics Guidance</a>, and <a href="#">ISO 27018</a></li>
+              </ul>
+        </p>
+
+        <br />
+        <p class="govuk-body">
+            This application should be filled out by the <a href="#">Senior Authorising Officer</a> at your organisation.
+        </p>
+        <br />
+        <br />
+        
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        <!-- prettier-ignore -->
+        {{ govukButton({
+            text: "Continue",
+            href: "declaration.html"
+        }) }}
+    </div>
+</div>
+
+{% endblock %}

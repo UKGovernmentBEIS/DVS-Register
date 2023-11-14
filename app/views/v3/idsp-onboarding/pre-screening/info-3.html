@@ -7,135 +7,198 @@ provider", serviceUrl: "#", navigation: [ { href: "#", text: "Search", active:
 true }, { href: "#", text: "About" }, { href: "#", text: "Help" } ] }) }}
 
 <div class="govuk-width-container">
-  {{ govukBreadcrumbs({ items: [ { text: "Home", href: "#" } ] }) }}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Submit information for an initial assessment
-      </h1>
-      <br />
+    {{ govukPhaseBanner({
+    tag: {
+    text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+    <br />
+    <a href="#" class="govuk-back-link">Back</a>
 
-      <br />
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="more-detail">
-          List all the geographical areas in which you curently provide or
-          expect to provide your service
-        </label>
-        <textarea
-          class="govuk-textarea"
-          id="more-detail"
-          name="moreDetail"
-          rows="5"
-          aria-describedby="more-detail-hint"
-        ></textarea>
-      </div>
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Which of these roles apply to your organisation?
+    <div class="govuk-grid-row">
+        <div class="govuk-width-container">
+            <h1 class="govuk-heading-xl">
+                Submit a pre-assessment application as a digital identity provider
             </h1>
-          </legend>
-          <div id="waste-hint" class="govuk-hint">Tick all that apply.</div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input
-                class="govuk-checkboxes__input"
-                id="waste"
-                name="waste"
-                type="checkbox"
-                value="carcasses"
-              />
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                IDSP
-              </label>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+
+            <br />
+
+            <br />
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="more-detail">
+                    List all the geographical areas in which you curently provide or
+                    expect to provide your service
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                    aria-describedby="more-detail-hint"></textarea>
             </div>
-            <div class="govuk-checkboxes__item">
-              <input
-                class="govuk-checkboxes__input"
-                id="waste-2"
-                name="waste"
-                type="checkbox"
-                value="mines"
-              />
-              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                ASP
-              </label>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which of these roles apply to your organisation?
+                        </h1>
+                    </legend>
+                    <div id="waste-hint" class="govuk-hint">Tick all that apply.</div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                value="carcasses" />
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                Digital Identity Service Provider (IDSP)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox"
+                                value="mines" />
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                Attribute Service Providers (ASP)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                value="farm" />
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Orchestration Service Providers (OSP)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                value="farm" />
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Wallet Provider (Holder)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+
+                            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox"
+                                value="farm" />
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Other
+                            </label>
+                        </div>
+                        <div class="govuk-inset-text">
+                            Please specify
+                            <br />
+                            <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+                        </div>
+
+                    </div>
+                </fieldset>
             </div>
-            <div class="govuk-checkboxes__item">
-              <input
-                class="govuk-checkboxes__input"
-                id="waste-3"
-                name="waste"
-                type="checkbox"
-                value="farm"
-              />
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                OSP
-              </label>
+            <br />
+
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="more-detail">
+                    If you ticked more than one role type above, please provide more details as to why.
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                    aria-describedby="more-detail-hint"></textarea>
             </div>
-          </div>
-        </fieldset>
-      </div>
-      <br />
 
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="more-detail">
-          Briefly describe the service you want to be certified with.
-        </label>
-        <textarea
-          class="govuk-textarea"
-          id="more-detail"
-          name="moreDetail"
-          rows="5"
-          aria-describedby="more-detail-hint"
-        ></textarea>
-      </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading">
+                            Is your service operationally ready?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
+                                value="england">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                                value="scotland">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-upload-1">
-          Upload any relevant document to support the information provided
-          above.
-        </label>
-        <input
-          class="govuk-file-upload"
-          id="file-upload-1"
-          name="fileUpload1"
-          type="file"
-        />
-      </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading">
+                            Do you have published privacy statement?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
+                                value="england">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                                value="scotland">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="more-detail">
-          Please provide information on your financial capability to undergo
-          full certification process and maintain for 2 years.
-        </label>
-        <textarea
-          class="govuk-textarea"
-          id="more-detail"
-          name="moreDetail"
-          rows="5"
-          aria-describedby="more-detail-hint"
-        ></textarea>
-      </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading">
+                            Do you have a published service description?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
+                                value="england">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                                value="scotland">
+                            <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-upload-1">
-          Upload any relevant document to support the information provided
-          above.
-        </label>
-        <input
-          class="govuk-file-upload"
-          id="file-upload-1"
-          name="fileUpload1"
-          type="file"
-        />
-      </div>
-      {{ govukButton({ text: "Continue", href: "info-4.html", isStartButton:
-      false }) }}
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="more-detail">
+                    Is there any other information that you would like to provide to assist your answers in the previous
+                    questions?ra
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                    aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                    Upload any relevant document to support your application.
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" />
+            </div>
+            {{ govukButton({ text: "Continue", href: "info-4.html", isStartButton:
+            false }) }}
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock %}

@@ -1,50 +1,80 @@
-{% extends "v3/layouts/main.html" %} {% extends
-"govuk-prototype-kit/layouts/govuk-branded.html" %} {% block pageTitle %}
-Register as a digital service provider {% endblock %} {% block header %}
+{% extends "v3/layouts/main.html" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+Register as a digital service provider
+{% endblock %}
+
+{% block header %}
 <!-- Blank header with no service name for the start page -->
-{{ govukHeader({ homepageUrl: "#", serviceName: "Register as a digital service
-provider", serviceUrl: "#", navigation: [ { href: "#", text: "Search", active:
-true }, { href: "#", text: "About" }, { href: "#", text: "Help" } ] }) }}
+{{ govukHeader({
+homepageUrl: "#",
+serviceName: "Register as a digital service provider",
+serviceUrl: "#",
+navigation: [
+{
+href: "#",
+text: "Search",
+active: true
+},
+{
+href: "#",
+text: "About"
+},
+{
+href: "#",
+text: "Help"
+}
+]
+}) }}
+
 
 <div class="govuk-width-container">
-  {{ govukBreadcrumbs({ items: [ { text: "Home", href: "#" } ] }) }}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Submit information for an initial assessment
-      </h1>
-      <br />
-      <br />
-      <label class="govuk-label govuk-label--m" for="more-detail">
-        Is there any other information that you would like to provide to assist
-        your application?
-      </label>
-      <ul class="govuk-body">
-        <li>
-          You currently are in the pre-screening stage of applying for
-          certification against the trust framework.
-        </li>
-        <li>You understand what you are applying for</li>
-        <li>
-          The Terms and Conditions associated with being part of the register
-        </li>
-        <li>The legal requirements</li>
-        <li>
-          You understand that you will need to be able to prove when asked that
-          you are compliant with standards and the UK jurisdiction.
-        </li>
-        <li>
-          You understand that this check is currently free and that a fee may be
-          associated with this in the future.
-        </li>
-      </ul>
+    {{ govukPhaseBanner({
+    tag: {
+    text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+    <br />
+    <a href="#" class="govuk-back-link">Back</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-width-container">
+            <h1 class="govuk-heading-xl">
+                Submit a pre-assessment application as a digital identity provider
+            </h1>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-form-group">
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--m" for="more-detail">
+                            Is there any other information that you would like to provide to assist your application?
+                        </label>
+                    </h1>
+                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+                        aria-describedby="more-detail-hint"></textarea>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="file-upload-1">
+                        Upload any relevant document to support the information provided above.
+                    </label>
+                    <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+                </div>
+            </div>
 
-      <br />
-      <br />
-      {{ govukButton({ text: "Confirm and Submit", href:
-      "confirm-and-submit.html", isStartButton: false }) }}
+            <br />
+            {{ govukButton({
+            text: "Continue",
+            href: "app-summary.html",
+            isStartButton: false
+            }) }}
+        </div>
+
     </div>
-  </div>
+
+</div>
 </div>
 
 {% endblock %}

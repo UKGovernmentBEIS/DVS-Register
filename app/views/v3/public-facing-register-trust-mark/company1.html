@@ -4,8 +4,8 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 {{ govukBreadcrumbs({ 
   items: [ 
   { text:"Home", href: "/v3/public-facing-register-trust-mark/start" }, 
-  { text: "Verify a UK Digital Trust Mark", href: "/v3/public-facing-register-trust-mark/search" }, 
-  { text: "Search results", href: "/v3/public-facing-register-trust-mark/search-results" },
+  { text: "Search the register", href: "/v3/public-facing-register-trust-mark/search" }, 
+  { text: "Search results", href: "/v3/public-facing-register-trust-mark/search-results-full" },
   { text: "SecureID Platform"}
   ]
   })
@@ -17,13 +17,36 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- START title -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
       <span class="govuk-caption-l"
-        >Certified Provider<span class="govuk-visually-hidden">:</span></span
+        >Digital Identity Provider<span class="govuk-visually-hidden"
+          >:</span
+        ></span
       >
       SecureID Platform
-      <p class="govuk-heading-s">Trustmark Number: EA889932</p>
     </h1>
+    <h2 class="govuk-caption-l govuk-!-margin-bottom-2">
+      <strong>Trading as:</strong> Safe ID Check
+    </h2>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3
+          class="govuk-caption-m govuk-!-margin-bottom-2"
+          style="color: #505a5f"
+        >
+          <b>Published to register:</b> 20 June 2021
+        </h3>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3
+          class="govuk-caption-m govuk-!-margin-bottom-2"
+          style="color: #505a5f"
+        >
+          <b>Page last updated:</b> 30 August 2022
+        </h3>
+      </div>
+    </div>
   </div>
 </div>
 <!-- END title -->
@@ -32,7 +55,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <div class="govuk-grid-row">`
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-!-padding-bottom-2">
-      <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Schemes certified against:</p>
+      <h3 class="govuk-caption-m govuk-!-margin-bottom-2" style="color: #505a5f"><b>Schemes certified against:</b></h3>
       {%- from "govuk/components/tag/macro.njk" import govukTag -%}
       {{ govukTag({
         text: "Right to work"
@@ -43,14 +66,6 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
       {{ govukTag({
         text: "Disclosure and Barring Service"
       }) }}
-    </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Published: 20 June 2021</p>
-      </div>
-      <div class="govuk-grid-column-one-half">
-        <p class="govuk-body govuk-!-margin-bottom-2" style="color: #505a5f">Last updated: 30 August 2022</p>
-      </div>
     </div>
     <div class="govuk-!-padding-bottom-7"></div>
 
@@ -63,6 +78,14 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 
     {{ govukSummaryList({
       rows: [
+        {
+          key: {
+            text: "Companies House number"
+          },
+          value: {
+            html: '<a href="#" class="govuk-link">08998951</a>'
+          }
+        },
         {
           key: {
             text: "Email"
@@ -105,7 +128,15 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
       rows: [
         {
           key: {
-            text: "Schemes certified against"
+            text: "Role type(s)"
+          },
+          value: {
+            text: "Identity, Attribute"
+          }
+        },
+        {
+          key: {
+            text: "Scheme(s) certified against"
           },
           value: {
             text: "Right to Work, Right to Rent, Disclosure and Barring Service"
@@ -139,11 +170,16 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
           key: {
             text: "Proof of certification"
           },
-          key: {
-            text: "Proof of certification"
-          },
           value: {
             html: '<a href="#" class="govuk-link">Certification document</a>'
+          }
+        },
+        {
+          key: {
+            text: "Schedule of conformity"
+          },
+          value: {
+            html: '<a href="#" class="govuk-link">Schedule of conformity</a>'
           }
         }
       ]
@@ -181,8 +217,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
     }) }}
   </div>
   <div class="govuk-grid-column-one-third" style="text-align: center;">
-    <img src="/public/images/fakemark-2.png" alt="trust mark for EA889932" class="govuk-!-margin-bottom-4" style="color: #505a5f"/>
-    <p>Trustmark number: <strong>EA889932</strong></p>
+   
   </div>
 </div>
 

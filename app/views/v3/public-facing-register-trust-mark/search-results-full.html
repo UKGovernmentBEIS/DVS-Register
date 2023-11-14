@@ -1,5 +1,5 @@
-{% extends "v3/layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find an identity
-provider - GOV.UK {% endblock %} {% block beforeContent %}
+{% extends "v3/layouts/prototype-trust-mark.html" %} {% block pageTitle %} Find
+an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <!-- prettier-ignore -->
 {{ govukBreadcrumbs({ 
   items: [ 
@@ -52,7 +52,6 @@ provider - GOV.UK {% endblock %} {% block beforeContent %}
               id="company-name"
               name="companyName"
               type="text"
-              value="Safe ID Check"
             />
           </div>
           <button
@@ -125,58 +124,32 @@ provider - GOV.UK {% endblock %} {% block beforeContent %}
         ]
       }) }}
 
-      <p><a class="govuk-link" href="#">What do role types mean? (opens in new tab or window)</a></p>
+    <p>
+      <a class="govuk-link" href="#"
+        >What do role types mean? (opens in new tab or window)</a
+      >
+    </p>
 
-      {{ govukCheckboxes({
-        idPrefix: 'attribute',
-        name: 'attribute',
-        classes: "govuk-checkboxes--small",
-        fieldset: {
-          legend: {
-            text: 'Identity Profiles',
-            classes: 'govuk-fieldset__legend--m'
-          }
-        },
-        items: [
-          {
-            value: 'l1a',
-            text: 'L1A'
-          },
-          {
-            value: 'l1b',
-            text: 'L1B'
-          },
-          {
-            value: 'l1c',
-            text: 'L1C'
-          }
-        ]
-      }) }}
-      
-      <p class="govuk-!-margin-top-4"><a class="govuk-link" href="#">What are Identity Profiles?(opens in new tab or window)</a></p>
-    
-    {% endset -%}
+    {{ govukCheckboxes({ idPrefix: 'attribute', name: 'attribute', classes:
+    "govuk-checkboxes--small", fieldset: { legend: { text: 'Identity Profiles',
+    classes: 'govuk-fieldset__legend--m' } }, items: [ { value: 'l1a', text:
+    'L1A' }, { value: 'l1b', text: 'L1B' }, { value: 'l1c', text: 'L1C' } ] })
+    }}
 
+    <p class="govuk-!-margin-top-4">
+      <a class="govuk-link" href="#"
+        >What are Identity Profiles?(opens in new tab or window)</a
+      >
+    </p>
 
-    {{ mojFilter({
-      heading: {
-        text: 'Filter'
-      },
-
-      submit: {
-        attributes: {
-            "data-test-id": "submit-button"
-        }
-      },
-      optionsHtml: filterOptionsHtml
-    }) }}
+    {% endset -%} {{ mojFilter({ heading: { text: 'Filter' }, submit: {
+    attributes: { "data-test-id": "submit-button" } }, optionsHtml:
+    filterOptionsHtml }) }}
   </div>
   <!-- END filter -->
 
   <div class="govuk-grid-column-two-thirds">
     <!-- START cards -->
-    <div class="govuk-heading-s">1 provider(s) found</div>
-    <p>Containing: <span style="border: 1px solid #0B0C0C; padding: 2px;">Safe ID Check <b>x</b></span></p>
     <div class="search-sort">
       <fieldset>
         <legend>Sort view</legend>
@@ -216,6 +189,97 @@ provider - GOV.UK {% endblock %} {% block beforeContent %}
     <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
       <a id="vacancy-02" href="company1.html"> SecureID Platform</a>
     </h2>
+    <div style="display: flex; justify-content: space-between;">
+      <p class="govuk-body" style="color: #505a5f">Trading as: Safe ID Check </p>
+      <p class="govuk-body" style="color: #505a5f">Sheffield, United Kingdom </p>
+    </div>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Schemes certified against</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to Work, Right to Rent, Disclosure and Barring Service
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Role types</dt>
+      <dd class="dsit-definition-list__definition">
+        Identity, Attribute, Orchestration,
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Identity profiles:</dt>
+      <dd class="dsit-definition-list__definition">
+        L1A, L1B, L1C
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+    />
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="vacancy-aof" href="#">IdentifiedID</a>
+    </h2>
+    <div style="display: flex; justify-content: space-between;">
+      <p class="govuk-body" style="color: #505a5f">Trading as: Safe ID Check </p>
+      <p class="govuk-body" style="color: #505a5f">Sheffield, United Kingdom </p>
+    </div>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Schemes certified against</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to Work, Right to Rent, Disclosure and Barring Service
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Role types</dt>
+      <dd class="dsit-definition-list__definition">
+        Identity, Attribute, Orchestration,
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Identity profiles:</dt>
+      <dd class="dsit-definition-list__definition">
+        L1A, L1B, L1C
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-5 govuk-!-margin-bottom-5"
+    />
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+      <a id="standard-274" href="#">Global DIP</a>
+    </h2>
+    <div style="display: flex; justify-content: space-between;">
+      <p class="govuk-body" style="color: #505a5f">Trading as: Safe ID Check </p>
+      <p class="govuk-body" style="color: #505a5f">Sheffield, United Kingdom </p>
+    </div>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Schemes certified against</dt>
+      <dd class="dsit-definition-list__definition">
+        Right to Work, Right to Rent, Disclosure and Barring Service
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Role types</dt>
+      <dd class="dsit-definition-list__definition">
+        Identity, Attribute, Orchestration,
+      </dd>
+    </dl>
+    <dl class="dsit-definition-list dsit-definition-list--meta">
+      <dt class="dsit-definition-list__title">Identity profiles:</dt>
+      <dd class="dsit-definition-list__definition">
+        L1A, L1B, L1C
+      </dd>
+    </dl>
+
+    <hr
+      class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5"
+    />
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+      <a id="standard-274" href="#">Bubble Verify</a>
+    </h2>
+
     <div style="display: flex; justify-content: space-between;">
       <p class="govuk-body" style="color: #505a5f">Trading as: Safe ID Check </p>
       <p class="govuk-body" style="color: #505a5f">Sheffield, United Kingdom </p>

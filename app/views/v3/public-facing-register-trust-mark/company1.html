@@ -55,7 +55,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
 <div class="govuk-grid-row">`
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-!-padding-bottom-2">
-      <h3 class="govuk-caption-m govuk-!-margin-bottom-2" style="color: #505a5f"><b>Schemes certified against:</b></h3>
+      <h3 class="govuk-caption-m govuk-!-margin-bottom-2" style="color: #505a5f"><b>Scheme(s):</b></h3>
       {%- from "govuk/components/tag/macro.njk" import govukTag -%}
       {{ govukTag({
         text: "Right to work"
@@ -136,7 +136,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
         },
         {
           key: {
-            text: "Scheme(s) certified against"
+            text: "Scheme(s)"
           },
           value: {
             text: "Right to Work, Right to Rent, Disclosure and Barring Service"
@@ -144,7 +144,7 @@ an identity provider - GOV.UK {% endblock %} {% block beforeContent %}
         },
         {
           key: {
-            text: "Identity profiles certified against"
+            text: "Identity profile(s)"
           },
           value: {
             text: "L1A, L1B, L1C, L2A, L2B, L2C"

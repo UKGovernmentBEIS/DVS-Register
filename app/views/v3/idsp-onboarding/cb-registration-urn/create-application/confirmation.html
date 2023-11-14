@@ -1,0 +1,35 @@
+{% extends "v3/layouts/prototype-cb-urn.html" %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukPanel({
+    titleText: "Application submitted",
+    html: "Your reference number<br /><strong>QQ123456C-123</strong>" }) }}
+
+    <p>
+      Your application has been submitted to the Office of Digital Identities
+      and Attributes (OfDIA).
+    </p>
+
+    <p>We have sent you a confirmation email to cab@cb.uk.</p>
+
+    <p>
+      You can
+      <a href="#" class="govuk-link">print or save this page as a PDF</a>.
+    </p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p>
+      We aim to contact you within 2 weeks to let you know the outcome of your
+      application.
+    </p>
+
+    <p>
+      You may be contacted for further information regarding your application.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

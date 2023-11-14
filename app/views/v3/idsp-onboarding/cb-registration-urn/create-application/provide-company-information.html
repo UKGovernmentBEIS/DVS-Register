@@ -1,0 +1,160 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Provide company information</span>
+      SecureID Platform
+      <span class="govuk-heading-s"
+        >Application reference number: QQ123456C-123</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <p>
+      Please provide information about role types and schemes. This information will appear on
+      the DVS register.
+    </p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+    <!-- prettier-ignore -->
+
+    {{ govukInput({
+      label: {
+        text: "Registered name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "company-name",
+      name: "companyName",
+      value: "SecureID Platform"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Trading name",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "trading-name",
+      name: "tradingName",
+      value: "Safe ID Check"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Companies House number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "companies-house-no",
+      name: "companiesHouseNo",
+      value: "08998951"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 1",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "address-line-1",
+      name: "addressLine1",
+      value: "Fora, 180 Borough High Street "
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 2 (optional)",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "address-line-2",
+      name: "addressLine2"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Town or City",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "town-city",
+      name: "townCity",
+      value: "London"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Postcode",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-!-width-one-quarter",
+      id: "postcode",
+      name: "postcode",
+      value: "SE31 1LB"
+    }) }}
+
+     {{ govukInput({
+      label: {
+        text: "Email",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Company contact email"
+      },
+      id: "email",
+      name: "email",
+      value: "info@secureidplatform.com"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Telephone",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Company UK contact number"
+      },
+      id: "telephone-number",
+      name: "telephoneNumber",
+      value: "+44 (0) 2045511332"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Website",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "Website",
+      name: "Website",
+      value: "www.secureidplatform.com"
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v3/idsp-onboarding/cb-registration-urn/create-application/provide-certification-details"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

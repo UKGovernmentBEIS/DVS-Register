@@ -1,0 +1,84 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Create an account</span>
+      Enter your company details
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukInput({
+      label: {
+        text: "Company telephone number",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "uk-tel-company-no",
+      name: "ukCompanyNumber",
+      value: "+44 2233 565656"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 1",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "address-line-1",
+      name: "addressLine1",
+      value: "4 D’Arblay St"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Address line 2 (optional)",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "address-line-2",
+      name: "addressLine2"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Town or city",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      id: "town-city",
+      name: "townCity",
+      value: "London"
+    }) }}
+    {{ govukInput({
+      label: {
+        text: "Postcode",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      classes: "govuk-input--width-20",
+      classes: "govuk-!-width-one-quarter",
+      id: "postcode",
+      name: "postcode",
+      value: "W1F 8DJ"
+    }) }}
+    
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Submit",
+      href: "/v3/idsp-onboarding/cb-registration-urn/case-list.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

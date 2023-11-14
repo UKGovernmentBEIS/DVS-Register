@@ -1,0 +1,28 @@
+{% extends "v3/layouts/prototype-cb-urn.html" %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- prettier-ignore -->
+    {{ govukPanel({
+    titleText: "Check complete" }) }}
+
+    <p>
+      We have checked the unique reference number is correct and associated with
+      this digital identity provider.
+    </p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p>You can start your process of certification.</p>
+
+    <p>
+      When you have completed the certification process please return to this portal for next steps.
+    </p>
+
+    <p>Please keep the unique reference number to create an application.</p>
+
+    <p>You can close this page now.</p>
+  </div>
+</div>
+
+{% endblock %}

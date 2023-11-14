@@ -64,8 +64,18 @@
         {
           value: "wallet-holder",
           text: "Wallet (holder)"
+        },
+        {
+          value: "other",
+          text: "Other"
         }
       ]
+    }) }}
+
+    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+    {{ govukInsetText({
+      html: '<div><label>Please specify</label></div><input class="govuk-input" id="url-cert-doc" name="urlToCertDoc" type="text" aria-describedby="url-cert-doc-hint">'
     }) }}
 
     {{ govukCheckboxes({

@@ -1,0 +1,39 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Register a digital identity provider</h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-m">
+      <a href="/v3/idsp-onboarding/cb-registration-urn/check-urn/start.html"
+        >Check unique reference number</a
+      >
+    </h2>
+    <p>
+      Before you start the certification process you need to confirm if the
+      digital identity provider that you will be auditing has passed the
+      pre-assessment.
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <h2 class="govuk-heading-m">
+      <a
+        href="/v3/idsp-onboarding/cb-registration-urn/create-application/start.html"
+        >Create application</a
+      >
+    </h2>
+    <p>
+      After you certify the digital identity provider for them to be published
+      on the DVS register you need to create an application in this form.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

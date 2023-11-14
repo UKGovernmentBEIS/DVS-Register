@@ -1,0 +1,69 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Check before you start</span>
+      Accept declaration
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      By submitting this form, you confirm that the information provided is correct to the  best of your knowledge.
+    </p>
+
+    <p>
+      I understand that the data I have provided can be used as set out in the
+      <a href="#" class="govuk-link">privacy policy</a>.
+    </p>
+
+    <p>
+      I consent to organisations, including financial institutions, providing
+      information to OfDIA requested in relation to this application.
+    </p>
+
+    <p>
+      I agree to the <a href="#" class="govuk-link">terms and conditions</a>.
+    </p>
+    <p>
+      I understand that if I have provided false information that this application can be
+      rejected and I may be prosecuted.
+    </p>
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    <!-- prettier-ignore -->
+    {{ govukCheckboxes({
+      classes: "govuk-checkboxes--small",
+      items: [
+        {
+          value: "hmrc",
+          text: "I confirm that I understand and accept this declaration."
+        }
+      ]
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v3/idsp-onboarding/cb-registration-urn/create-application/provide-company-information.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

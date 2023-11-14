@@ -1,0 +1,226 @@
+<!-- prettier-ignore -->
+{% extends "v3/layouts/prototype-cb-urn.html" %}
+
+{% block beforeContent %} 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "checklist"
+}) }}  
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Provide certification details</span>
+      SecureID Platform
+      <span class="govuk-heading-s"
+        >Application reference number: QQ123456C-123</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Please provide information about role types and schemes. This information will appear on
+      the DVS register.
+    </p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <!-- prettier-ignore -->
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    {{ govukCheckboxes({
+      name: "waste",
+      fieldset: {
+        legend: {
+          text: "Role types",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select all the role types that apply to the digital identity provider."
+      },
+      items: [
+        {
+          value: "identity",
+          text: "Identity"
+        },
+        {
+          value: "attribute",
+          text: "Attribute"
+        },
+        {
+          value: "orchestration",
+          text: "Orchestration"
+        },
+        {
+          value: "wallet-holder",
+          text: "Wallet (holder)"
+        }
+      ]
+    }) }}
+
+    {{ govukCheckboxes({
+      name: "waste",
+      fieldset: {
+        legend: {
+          text: "Schemes",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select all the schemes that the digital identity provider has been certified against."
+      },
+      items: [
+        {
+          value: "right-to-work",
+          text: "Right to Work"
+        },
+        {
+          value: "right-to-rent",
+          text: "Right to Rent"
+        },
+        {
+          value: "disclosure-barring-service",
+          text: "Disclosure and Barring Service"
+        },
+        {
+          value: "ukdiatf",
+          text: "UK digital identity and attributes trust framework (UKDIATF) "
+        }
+      ]
+    }) }}
+
+    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+    {{ govukTextarea({
+      name: "moreDetail",
+      id: "more-detail",
+      label: {
+        text: "Identity profiles",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "List the identity profiles for the digital identity provider, separated by a comma."
+      }
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Certificate of conformity",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Provide a link to the digital identity provider's certificate of conformity. The file should usually be hosted by either your organisation's website or another file hosting website."
+      },
+      id: "url-cert-doc",
+      name: "urlToCertDoc"
+    }) }}
+
+    {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+    {{ govukFileUpload({
+      id: "file-upload-12",
+      name: "fileUpload12",
+      label: {
+        text: "Upload the certificate of conformity. File should be in PDF format."
+      }
+    }) }}
+
+    {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+    {{ govukDateInput({
+      id: "an-issued",
+      namePrefix: "an-issued",
+      fieldset: {
+        legend: {
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Date of issue"
+      }
+    }) }}
+
+    {{ govukDateInput({
+      id: "an-issued11",
+      namePrefix: "an-issued11",
+      fieldset: {
+        legend: {
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Date of expiry"
+      }
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Schedule of conformity",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      hint: {
+        text: "Provide a link to the digital identity provider's schedule of conformity. The file should usually be hosted by either your organisation's website or another file hosting website."
+      },
+      id: "url-cert-doc2",
+      name: "urlToCertDoc2"
+    }) }}
+
+    {{ govukFileUpload({
+      id: "file-upload-2",
+      name: "fileUpload2",
+      label: {
+        text: "Upload the schedule of conformity. File should be in PDF format. "
+      }
+    }) }}
+
+    {{ govukDateInput({
+      id: "issued2",
+      namePrefix: "issued2",
+      fieldset: {
+        legend: {
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Date of issue"
+      }
+    }) }}
+
+    {{ govukDateInput({
+      id: "issued3",
+      namePrefix: "issued3",
+      fieldset: {
+        legend: {
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Date of expiry"
+      }
+    }) }}
+   
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <!-- prettier-ignore -->
+    {{ govukButton({
+      text: "Save and continue",
+      href: "/v3/idsp-onboarding/cb-registration-urn/create-application/application-summary.html"
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

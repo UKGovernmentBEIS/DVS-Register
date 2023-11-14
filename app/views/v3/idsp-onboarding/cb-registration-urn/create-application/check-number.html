@@ -1,11 +1,11 @@
-<!-- prettier-ignore -->
-{% extends "/v3/layouts/prototype-cb.html" %}
-
-{% block content %}
+{% extends "/v3/layouts/prototype-cb-urn.html" %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Create an application</h1>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Create an application</span>
+      Digital identity provider
+    </h1>
   </div>
 </div>
 
@@ -14,30 +14,24 @@
     <!-- prettier-ignore -->
     {{ govukInput({
       label: {
-        text: "Digital Identity Provider Trading Name",
+        text: "Registered name",
         classes: "govuk-label--m",
         isPageHeading: true
       },
-      id: "trading-name",
-      name: "tradingName"
+      classes: "govuk-!-width-three-quarters",
+      id: "registered-name",
+      name: "egisteredName"
     }) }}
-    {{ govukInput({
-      label: {
-        text: "Digital Identity Provider Company Name",
-        classes: "govuk-label--m",
-        isPageHeading: true
-      },
-      id: "company-name",
-      name: "companyName"
-    }) }}
+
     {{ govukInput({
       label: {
         text: "Unique reference number",
         classes: "govuk-label--m",
         isPageHeading: true
       },
+      classes: "govuk-!-width-three-quarters",
       hint: {
-        text: "The Digital Identity Provider you are applying for should have provided you with this number."
+        text: "Digital identity provider has shared this number via email with you. For example, 'QQ 12 34 56 C'."
       },
       id: "unique-ref-number",
       name: "uniqueRefNumber"
@@ -47,8 +41,8 @@
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
-      text: "Create an application",
-      href: "/v3/idsp-onboarding/cb-registration/checklist"
+      text: "Create application",
+      href: "/v3/idsp-onboarding/cb-registration-urn/create-application/checklist"
     }) }}
   </div>
 </div>

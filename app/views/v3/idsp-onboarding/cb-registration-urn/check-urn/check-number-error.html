@@ -1,6 +1,4 @@
-{% extends "/v3/layouts/prototype-cb-urn.html" %}
-
-{% block content %}
+{% extends "/v3/layouts/prototype-cb-urn.html" %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -39,23 +37,23 @@
       name: "uniqueRefNumber",
       errorMessage: {
         html: '
-              <p class="govuk-error-message">The number you entered does not exist.</p>
-              <ol class="govuk-error-message">
-              <li class="">Please check if you entered the number in the correct format. For
-              example, "QQ123456C".</li>
-              <li class="">Reach out to digital identity provider to check if they shared the
-              correct number</li>' 
-      }
-    }) }} 
-
-
-    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <p class="govuk-error-message">The number you entered does not exist.</p>
+    <ol class="govuk-error-message">
+      <li class="">
+        Please check if you entered the number in the correct format. For
+        example, "QQ123456C".
+      </li>
+      <li class="">
+        Reach out to digital identity provider to check if they shared the
+        correct number
+      </li>
+    </ol>
+    ' } }) }} {% from "govuk/components/button/macro.njk" import govukButton %}
     <!-- prettier-ignore -->
     {{ govukButton({
       text: "Check",
       href: "/v3/idsp-onboarding/cb-registration-urn/check-urn/confirmation"
     }) }}
-   
   </div>
 </div>
 

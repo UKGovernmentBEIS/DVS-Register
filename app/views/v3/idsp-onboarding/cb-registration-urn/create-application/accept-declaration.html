@@ -24,7 +24,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p>
-      By submitting this form, you confirm that the information provided is correct to the  best of your knowledge.
+      By submitting this form, you confirm that the information provided is
+      correct to the best of your knowledge.
     </p>
 
     <p>
@@ -41,8 +42,8 @@
       I agree to the <a href="#" class="govuk-link">terms and conditions</a>.
     </p>
     <p>
-      I understand that if I have provided false information that this application can be
-      rejected and I may be prosecuted.
+      I understand that if I have provided false information that this
+      application can be rejected and I may be prosecuted.
     </p>
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -51,6 +52,7 @@
       classes: "govuk-checkboxes--small",
       items: [
         {
+          id: "ad-submit",
           value: "hmrc",
           text: "I confirm that I understand and accept this declaration."
         }
